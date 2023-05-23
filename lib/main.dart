@@ -1,18 +1,33 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:games_organizing/core/service/theme_service.dart';
 import 'package:games_organizing/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-void main() {}
+import 'config/constants.dart';
+
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+  final ThemeService _themeService;
+  MyApp({super.key}) : _themeService = ThemeService();
+ 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      onGenerateRoute: RouteGenerator.getRoute,
-      initialRoute: Routes.splashView,
-    );
+    return ScreenUtilInit(
+        splitScreenMode: true,
+        minTextAdapt: true,
+        designSize: const Size(Constants.deviceWidth, Constants.deviceHeight),
+        builder: (context, child) {
+          return GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            onGenerateRoute: RouteGenerator.getRoute,
+            initialRoute: Routes.splashView,
+            theme: _themeService.getThemeData(),
+            themeMode: _themeService.getThemeMode(),
+          );
+        });
   }
 }
