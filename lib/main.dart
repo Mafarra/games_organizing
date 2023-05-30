@@ -5,15 +5,17 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'config/constants.dart';
+import 'config/dependency_injection.dart';
 
 void main() {
+  initModul();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   final ThemeService _themeService;
   MyApp({super.key}) : _themeService = ThemeService();
- 
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
