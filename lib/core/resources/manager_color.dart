@@ -6,7 +6,8 @@ class ManagerColors {
   static const Color textColor = Color(0xFF072A33);
   static const Color textColorLight = Color(0xff525167);
   static const Color subTitleColor = Color(0xff839499);
-  static const Color primaryColor = Color(0xffFFB300);
+  static const Color primaryColor = Color(0xfff84444);
+  static const Color oldPrimaryColor = Color(0xffFFB300);
   static const Color borderSide = Color(0xff1A1919);
   static const Color buttonColorLight = Colors.black;
   static const Color buttonColorDarK = Color(0xFFA7E4DC);
@@ -16,7 +17,7 @@ class ManagerColors {
   static const Color primaryColorLight = Color(0xFF000333);
   static const Color background = Color(0xFFF2F7F7);
   static const Color backgroundForm = Color(0xFFFBFBFE);
-  static const Color grey = Colors.grey;
+  static const Color grey = Color(0xFFB4B8BD);
   static const Color backgroundCategory = Color(0xFEDD6800);
   static const Color backgroundCategories = Color(0xFFF1F1F1);
   static const Color selectedCategory = Color(0xFFFFC727);
@@ -31,7 +32,8 @@ class ManagerColors {
   static const Color descriptionColor = Color(0xff6A7F84);
   static const Color scaffoldBackgroundColorLight = Colors.white;
   static const Color snackBarErrorColor = Colors.red;
-  static const Color activeColorIndicator = Colors.black;
+  static const Color activeColorIndicator = ManagerColors.primaryColor;
   static const Color inactiveColorIndicator = Colors.grey;
   static const Color textColorblackButton = Colors.white;
+  static const Color transparent = Colors.transparent;
 }
