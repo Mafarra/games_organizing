@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:games_organizing/config/constants.dart';
-import 'package:games_organizing/core/resources/manager_color.dart';
 import 'package:games_organizing/features/out_bording/presentation/controller/out_boarding_controller.dart';
 import 'package:get/get.dart';
 import '../resources/managers_size.dart';
