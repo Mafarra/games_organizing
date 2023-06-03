@@ -6,7 +6,7 @@ class ManagerColors {
   static const Color textColor = Color(0xFF072A33);
   static const Color textColorLight = Color(0xff525167);
   static const Color subTitleColor = Color(0xff839499);
-  static const Color primaryColor = Color(0xfff84444);
+  static const Color primaryColor = Color(0xffDA2F37);
   static const Color oldPrimaryColor = Color(0xffFFB300);
   static const Color borderSide = Color(0xff1A1919);
   static const Color buttonColorLight = Colors.black;
