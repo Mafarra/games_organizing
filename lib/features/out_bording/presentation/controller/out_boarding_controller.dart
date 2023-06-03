@@ -58,7 +58,7 @@ class OutBoarddingController extends GetxController {
   void gotoNextPage() {
     isNotLastPage()
         ? _customAnimateToPage(++currentPageIndex)
-        : Get.offAllNamed(Routes.loginView);
+        : Get.offAllNamed(Routes.chooseAccountView);
     update();
   }
 
