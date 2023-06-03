@@ -13,4 +13,10 @@ class ManagerStrings {
   static const String outBoardingThirdTitle = "طرق دفع متعددة وسهلة";
   static const String outBoardingThirdBody =
       "وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى";
+  static const String signIn = 'تسجيل الدخول';
+  static const String signUp = 'إنشاء حساب جديد';
+  static const String chooseAccountText1 =
+      '''تمتع بالجلسات الهادئة والألعاب الجميلة 
+نتمنى لك أوقاتاً ممتعة''';
+  static const String chooseAccountText2 = 'الدخول الى التطبيق كزائر';
 }
