@@ -18,17 +18,17 @@ class OutBoarddingController extends GetxController {
     welcomePageView(
       title: ManagerStrings.outBoardingfirstTitle,
       description: ManagerStrings.outBoardingfirstBody,
-      photoAsset: ManagerAssets.logo,
+      photoAsset: ManagerAssets.illustration1,
     ),
     welcomePageView(
       title: ManagerStrings.outBoardingSecondTitle,
       description: ManagerStrings.outBoardingSecondBody,
-      photoAsset: ManagerAssets.logo,
+      photoAsset: ManagerAssets.illustration2,
     ),
     welcomePageView(
       title: ManagerStrings.outBoardingThirdTitle,
       description: ManagerStrings.outBoardingThirdBody,
-      photoAsset: ManagerAssets.logo,
+      photoAsset: ManagerAssets.illustration3,
     ),
   ];
   void _customAnimateToPage(int page) {
