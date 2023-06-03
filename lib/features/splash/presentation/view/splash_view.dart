@@ -12,8 +12,8 @@ class SplashView extends StatelessWidget {
     return scaffoldWithBackGroundImage(
       child: Center(
         child: SvgPicture.asset(
-          ManagerAssets.logo,
-          width: ManagerWidth.w166,
+          ManagerAssets.logoPackground,
+          width: ManagerWidth.w302,
         ),
       ),
     );
