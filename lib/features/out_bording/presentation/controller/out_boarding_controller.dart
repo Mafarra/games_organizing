@@ -16,19 +16,18 @@ class OutBoarddingController extends GetxController {
   double height = MediaQuery.of(Get.context!).size.height;
   final List<Widget> pagesContent = [
     welcomePageView(
-      title: "ميزة من مميزات التطبيق",
-      description:
-          "وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى",
+      title: ManagerStrings.outBoardingfirstTitle,
+      description: ManagerStrings.outBoardingfirstBody,
       photoAsset: ManagerAssets.logo,
     ),
     welcomePageView(
-      title: "title2",
-      description: "description2",
+      title: ManagerStrings.outBoardingSecondTitle,
+      description: ManagerStrings.outBoardingSecondBody,
       photoAsset: ManagerAssets.logo,
     ),
     welcomePageView(
-      title: "title3",
-      description: "description3",
+      title: ManagerStrings.outBoardingThirdTitle,
+      description: ManagerStrings.outBoardingThirdBody,
       photoAsset: ManagerAssets.logo,
     ),
   ];
