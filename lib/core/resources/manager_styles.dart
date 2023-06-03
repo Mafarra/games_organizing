@@ -23,7 +23,7 @@ TextStyle getRegularTextStyle({
 }) {
   return _textStyle(
       fontSize: fontSize,
-      fontFamily: ManagerFontFamily.fontFamily,
+      fontFamily: ManagerFontFamily.fontFamilyAr,
       fontweight: ManagerFontWeight.regular,
       color: color,
       decoration: decoration);
@@ -36,7 +36,7 @@ TextStyle getBoldTextStyle({
 }) {
   return _textStyle(
       fontSize: fontSize,
-      fontFamily: ManagerFontFamily.fontFamily,
+      fontFamily: ManagerFontFamily.fontFamilyAr,
       fontweight: ManagerFontWeight.bold,
       color: color,
       decoration: decoration);
@@ -49,7 +49,7 @@ TextStyle getMediumTextStyle({
 }) {
   return _textStyle(
       fontSize: fontSize,
-      fontFamily: ManagerFontFamily.fontFamily,
+      fontFamily: ManagerFontFamily.fontFamilyAr,
       fontweight: ManagerFontWeight.medium,
       color: color,
       decoration: decoration);
