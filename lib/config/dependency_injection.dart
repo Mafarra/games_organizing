@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:games_organizing/features/auth/presentaion/controller/login_controller.dart';
 import 'package:games_organizing/features/out_bording/presentation/controller/out_boarding_controller.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
@@ -31,5 +32,5 @@ disposeOutBoarding() {
 
 initLoginView() {
   disposeOutBoarding();
-  // Get.put<OutBoarddingController>(OutBoarddingController());
+  Get.put<LoginController>(LoginController());
 }
