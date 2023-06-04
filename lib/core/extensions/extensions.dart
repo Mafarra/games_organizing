@@ -1,4 +1,6 @@
 import 'dart:ui';
+import 'package:flutter/material.dart';
+
 import '../resources/manager_color.dart';
 
 extension NonNullString on String? {
@@ -67,6 +69,15 @@ extension NonNullFunctionBool on bool Function()? {
       return () {
         return false;
       };
+    } else {
+      return this!;
+    }
+  }
+}
+extension NonNullWidget on Widget? {
+ Widget onNull() {
+    if (this == null) {
+        return const SizedBox();
     } else {
       return this!;
     }
