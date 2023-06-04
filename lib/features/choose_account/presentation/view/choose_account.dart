@@ -5,8 +5,10 @@ import 'package:games_organizing/core/resources/manager_assets.dart';
 import 'package:games_organizing/core/resources/manager_strings.dart';
 import 'package:games_organizing/core/resources/manager_styles.dart';
 import 'package:games_organizing/core/widgets/main_button.dart';
+import 'package:get/get.dart';
 import '../../../../core/resources/manager_color.dart';
 import '../../../../core/resources/managers_size.dart';
+import '../../../../routes/routes.dart';
 
 class ChooseAccountView extends StatelessWidget {
   const ChooseAccountView({super.key});
@@ -63,6 +65,7 @@ class ChooseAccountView extends StatelessWidget {
                     style: getMediumTextStyle(
                         fontSize: 14, color: ManagerColors.white),
                   ),
+                  onPressed: () => Get.offAllNamed(Routes.loginView),
                 ),
                 SizedBox(
                   height: ManagerHeight.h16,
@@ -92,7 +95,6 @@ class ChooseAccountView extends StatelessWidget {
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  
                 ),
               ],
             ),
