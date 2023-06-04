@@ -27,7 +27,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const ChooseAccountView());
       case Routes.loginView:
         initLoginView();
-        return MaterialPageRoute(builder: (_) => const LoginView());
+        return MaterialPageRoute(builder: (_) => LoginView());
       default:
         return unDefinedRoute();
     }

@@ -19,4 +19,9 @@ class ManagerStrings {
       '''تمتع بالجلسات الهادئة والألعاب الجميلة 
 نتمنى لك أوقاتاً ممتعة''';
   static const String chooseAccountText2 = 'الدخول الى التطبيق كزائر';
+  static const String welcomeAgain = '! أهلاً وسهلاً بك مرة أخرى';
+  static const String email = 'البريد الإلكتروني';
+  static const String password = 'كلمة المرور';
+  static const String invalidEmail = 'Invalid Email';
+  static const String invalidPassword = 'Invalid Password';
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class ManagerColors {
   static const Color white = Colors.white;
+  static const Color greyWhite = Color(0xffF6F6F6);
   static const Color black = Colors.black;
   static const Color textColor = Color(0xFF072A33);
   static const Color textColorLight = Color(0xff525167);
