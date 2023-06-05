@@ -24,4 +24,8 @@ class ManagerStrings {
   static const String password = 'كلمة المرور';
   static const String invalidEmail = 'Invalid Email';
   static const String invalidPassword = 'Invalid Password';
+  static const String rememberMe = 'تذكرني';
+  static const String forgotPassword = 'لقد نسيت كلمة المرور ؟';
+  static const String haveNotAccount = 'ليس لديك حساب ؟';
+  static const String createAccount = 'إنشاء حساب';
 }
