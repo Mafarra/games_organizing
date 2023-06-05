@@ -3,6 +3,8 @@ import 'package:games_organizing/features/auth/presentaion/controller/login_cont
 import 'package:games_organizing/features/out_bording/presentation/controller/out_boarding_controller.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
+import '../features/auth/presentaion/controller/registration_controller.dart';
+import '../features/choose_account/presentation/controller/choose_account_controller.dart';
 import '../features/splash/presentation/controller/splash_controller.dart';
 
 final instance = GetIt.instance;
@@ -30,7 +32,28 @@ disposeOutBoarding() {
   Get.delete<OutBoarddingController>();
 }
 
+initChooseAccountsView() {
+  disposeOutBoarding();
+  Get.put<ChooseAccountController>(
+    ChooseAccountController(),
+  );
+}
+
+disposeChooseAccountsView() {
+  Get.delete<ChooseAccountController>();
+}
+
 initLoginView() {
   disposeOutBoarding();
+  disposeChooseAccountsView();
   Get.put<LoginController>(LoginController());
+}
+
+disposeLoginView() {
+  Get.delete<LoginController>();
+}
+
+initRegisterView() {
+  disposeLoginView();
+  Get.put<RegisterController>(RegisterController());
 }
