@@ -14,17 +14,25 @@ class FailedValidator {
     if (!GetUtils.isEmail(email)) {
       return ManagerStrings.invalidEmail;
     }
-
     return null;
   }
-
-  String? validatePassword(String? password) {
+   String? validatePassword(String? password) {
     if (password!.isEmpty) {
       return ManagerStrings.invalidPassword;
     }
 
     if (password.length < 8) {
       return ManagerStrings.invalidPassword;
+    }
+    return null;
+  }
+  String? validateFullName(String? password) {
+    if (password!.isEmpty) {
+      return ManagerStrings.invalidEntry;
+    }
+
+    if (password.length < 5) {
+      return ManagerStrings.invalidEntry;
     }
 
     return null;

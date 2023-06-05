@@ -24,8 +24,18 @@ class ManagerStrings {
   static const String password = 'كلمة المرور';
   static const String invalidEmail = 'Invalid Email';
   static const String invalidPassword = 'Invalid Password';
+  static const String invalidEntry = 'Invalid Entry';
   static const String rememberMe = 'تذكرني';
   static const String forgotPassword = 'لقد نسيت كلمة المرور ؟';
   static const String haveNotAccount = 'ليس لديك حساب ؟';
   static const String createAccount = 'إنشاء حساب';
+  static const String ihaveAccount = 'لدي حساب سابق ؟';
+  static const String createNewAccount = 'إنشاء حساب جديد';
+  static const String createYourAccountPlz ='!من فضلك, قم بتسجيل جميع  البيانات';
+  static const String fullName = 'الإسم كامل';
+  static const String birthDate = 'تاريخ الميلاد';
+  static const String confirmPassword = 'تأكيد كلمة المرور';
+  static const String fullNameHint = 'أحمد عبد العزيز';
+  static const String selectGender = 'تحديد الجنس';
+  static const String agreePolicyConditons = 'أنا أوافق على جميع الشروط والأحكام';
 }

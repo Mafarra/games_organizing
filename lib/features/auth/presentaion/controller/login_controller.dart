@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/resources/manager_color.dart';
+import '../../../../routes/routes.dart';
 
 class LoginController extends GetxController {
   late TextEditingController email = TextEditingController();
@@ -25,5 +26,9 @@ class LoginController extends GetxController {
   void changeRememberMeCheckBoxValue() {
     rememberMeCheckBoxValue = !rememberMeCheckBoxValue;
     update();
+  }
+
+  gotoRigisterScreen() {
+    Get.offAllNamed(Routes.registerView);
   }
 }
