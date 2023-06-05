@@ -4,6 +4,7 @@ import 'package:games_organizing/features/splash/presentation/view/splash_view.d
 import 'package:flutter/material.dart';
 
 import '../core/resources/manager_strings.dart';
+import '../features/auth/presentaion/view/register_view.dart';
 import '../features/choose_account/presentation/view/choose_Account.dart';
 import '../features/out_bording/presentation/view/out_boarding_view.dart';
 
@@ -11,6 +12,7 @@ class Routes {
   static const String splashView = '/splash_view';
   static const String outBoardingView = '/out_boarding_view';
   static const String loginView = '/login_view';
+  static const String registerView = '/register_view';
   static const String chooseAccountView = '/choose_account';
 }
 
@@ -24,10 +26,14 @@ class RouteGenerator {
         initOutBoarding();
         return MaterialPageRoute(builder: (_) => const OutBordingView());
       case Routes.chooseAccountView:
+        initChooseAccountsView();
         return MaterialPageRoute(builder: (_) => const ChooseAccountView());
       case Routes.loginView:
         initLoginView();
         return MaterialPageRoute(builder: (_) => LoginView());
+      case Routes.registerView:
+        initRegisterView();
+        return MaterialPageRoute(builder: (_) => RegisterView());
       default:
         return unDefinedRoute();
     }
