@@ -65,7 +65,7 @@ class ChooseAccountView extends StatelessWidget {
                     style: getMediumTextStyle(
                         fontSize: 14, color: ManagerColors.white),
                   ),
-                  onPressed: () => Get.offAllNamed(Routes.loginView),
+                  onPressed: () => Get.offAllNamed(Routes.loginView),//TODO: use controller
                 ),
                 SizedBox(
                   height: ManagerHeight.h16,

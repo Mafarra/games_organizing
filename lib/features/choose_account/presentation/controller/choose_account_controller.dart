@@ -13,10 +13,6 @@ class ChooseAccountController extends GetxController {
     super.onClose();
   }
 
-  @override
-  // TODO: implement onDelete
-  InternalFinalCallback<void> get onDelete => super.onDelete;
-
   void gotoSigninScreen() {}
   void gotoSignupScreen() {}
   void enterAsVisitor() {}

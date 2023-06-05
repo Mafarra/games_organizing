@@ -24,9 +24,9 @@ Path path_0 = Path();
     path_0.cubicTo(size.width*0.05366667,size.height*0.9176590,0,size.height,0,size.height);
     path_0.close();
 
-Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-paint_0_fill.color = ManagerColors.primaryColor.withOpacity(1.0);
-canvas.drawPath(path_0,paint_0_fill);
+Paint paint0Fill = Paint()..style=PaintingStyle.fill;
+paint0Fill.color = ManagerColors.primaryColor.withOpacity(1.0);
+canvas.drawPath(path_0,paint0Fill);
 
 }
 
