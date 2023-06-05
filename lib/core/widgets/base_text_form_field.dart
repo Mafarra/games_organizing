@@ -11,26 +11,33 @@ TextFormField baseTextFormField({
   TextInputType? keyboardType,
   bool? obscureText,
   validator,
+  Widget? icon,
+  Widget? prefixIcon,
 }) {
   return TextFormField(
     style: getRegularTextStyle(
       fontSize: ManagerFontSize.s16,
       color: ManagerColors.black,
     ),
+    textAlign: TextAlign.start,
+    textDirection: TextDirection.rtl, //TODO:this will be Checked by the app language
     controller: controller,
     keyboardType: keyboardType,
     cursorColor: ManagerColors.primaryColor,
     obscureText: obscureText.onNull(),
     validator: validator,
     decoration: InputDecoration(
-      //TODO;add icon
+      prefixIcon: prefixIcon,// 
+      suffixIcon: icon.onNull(),
+      suffixIconColor:  ManagerColors.grey,
       filled: true,
       contentPadding: EdgeInsets.symmetric(
-        horizontal: ManagerWidth.w16,
+        // horizontal: ManagerWidth.w16,
         vertical: ManagerHeight.h6,
       ),
       fillColor: ManagerColors.greyWhite,
       hintText: hintText.onNull(),
+      hintTextDirection: TextDirection.rtl, //TODO: this will be Checked by the app language
       hintStyle: getRegularTextStyle(
         fontSize: ManagerFontSize.s16,
         color: ManagerColors.grey,
