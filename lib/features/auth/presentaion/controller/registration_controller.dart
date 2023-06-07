@@ -17,15 +17,21 @@ class RegisterController extends GetxController {
   var formKey = GlobalKey<FormState>();
   bool passwordVisible = false;
   bool policyBoxValue = false;
-  Color genderBorderColor = Colors.grey;
   List<GenderModel> genderItems = [
     GenderModel(
-        genderType: 'ذكر', id: 1, svgPic: ManagerAssets.male, isChecked: false),
+      genderType: 'ذكر',
+      id: 1,
+      svgPic: ManagerAssets.male,
+      isChecked: false,
+      color: ManagerColors.grey,
+    ),
     GenderModel(
-        genderType: 'أنثى',
-        id: 2,
-        svgPic: ManagerAssets.female,
-        isChecked: false),
+      genderType: 'أنثى',
+      id: 2,
+      svgPic: ManagerAssets.female,
+      isChecked: false,
+      color: ManagerColors.grey,
+    ),
   ];
   Icon showIconVisible() {
     return Icon(
@@ -55,9 +61,10 @@ class RegisterController extends GetxController {
   }
 
   changeBorderColorOnCheck(GenderModel genderModel) {
+    cleargendersColor();
     ischecked(genderModel)
-        ? genderBorderColor = ManagerColors.primaryColor
-        : genderBorderColor = ManagerColors.grey;
+        ? genderModel.color = ManagerColors.primaryColor
+        : genderModel.color = ManagerColors.grey;
     update();
   }
 
@@ -67,8 +74,14 @@ class RegisterController extends GetxController {
   }
 
   void clearCheckedgenders() {
-    genderItems[1].isChecked = false;
     genderItems[0].isChecked = false;
+    genderItems[1].isChecked = false;
+    update();
+  }
+
+  void cleargendersColor() {
+    genderItems[0].color = ManagerColors.grey;
+    genderItems[1].color = ManagerColors.grey;
     update();
   }
 

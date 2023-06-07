@@ -14,16 +14,16 @@ Widget genderItem(
     RegisterController? controller}) {
   return InkWell(
     onTap: () {
-      controller.clearCheckedgenders();
-      controller.changeBorderColorOnCheck(genderModel);
+      controller!.clearCheckedgenders();
       controller.changedcheckedValue(genderModel);
+      controller.changeBorderColorOnCheck(genderModel);
     },
     child: Container(
       width: ManagerWidth.w75,
       height: ManagerHeight.h85,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: controller!.genderBorderColor, width: 1),
+        border: Border.all(color: genderModel!.color.onNull(), width: 1),
       ),
       child: Column(
         children: [
@@ -40,13 +40,11 @@ Widget genderItem(
                   width: ManagerWidth.w10,
                   height: ManagerHeight.h10,
                   child: Checkbox(
-                    value: genderModel!.isChecked,
+                    value: genderModel.isChecked,
                     onChanged: (bool? newValue) {
-                      controller.clearCheckedgenders();
-                      genderModel.isChecked = newValue;
+                      controller!.clearCheckedgenders();
+                      controller.changedcheckedValue(genderModel);
                       controller.changeBorderColorOnCheck(genderModel);
-                      controller.genderType = genderModel.genderType.onNull();
-                      controller.update();
                     },
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50),
