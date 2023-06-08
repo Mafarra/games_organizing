@@ -9,7 +9,7 @@ import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/validator/validator.dart';
 import '../../../../core/widgets/base_text_form_field.dart';
 import '../../../../core/widgets/main_button.dart';
-import '../../../../core/widgets/register_screen_widget.dart';
+import '../../../../core/widgets/auth_screen_widget.dart';
 import '../../../../routes/routes.dart';
 import '../controller/registration_controller.dart';
 
@@ -18,7 +18,7 @@ class RegisterView extends StatelessWidget {
   RegisterView({super.key});
   @override
   Widget build(BuildContext context) {
-    return RigisterScreenWidget(
+    return AuthScreenWidget(
       child: GetBuilder<RegisterController>(
         init: RegisterController(),
         builder: (controller) {

@@ -8,7 +8,7 @@ import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/validator/validator.dart';
 import '../../../../core/widgets/base_text_form_field.dart';
 import '../../../../core/widgets/main_button.dart';
-import '../../../../core/widgets/register_screen_widget.dart';
+import '../../../../core/widgets/auth_screen_widget.dart';
 import '../controller/login_controller.dart';
 
 class LoginView extends StatelessWidget {
@@ -16,7 +16,7 @@ class LoginView extends StatelessWidget {
   LoginView({super.key});
   @override
   Widget build(BuildContext context) {
-    return RigisterScreenWidget(
+    return AuthScreenWidget(
       child: GetBuilder<LoginController>(
         init: LoginController(),
         builder: (controller) {

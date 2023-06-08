@@ -44,8 +44,9 @@ disposeChooseAccountsView() {
 }
 
 initLoginView() {
-  disposeOutBoarding();
-  disposeChooseAccountsView();
+    disposeRegisterView();
+    disposeOutBoarding();
+    disposeChooseAccountsView();
   Get.put<LoginController>(LoginController());
 }
 
@@ -56,4 +57,8 @@ disposeLoginView() {
 initRegisterView() {
   disposeLoginView();
   Get.put<RegisterController>(RegisterController());
+}
+
+disposeRegisterView() {
+  Get.delete<RegisterController>();
 }

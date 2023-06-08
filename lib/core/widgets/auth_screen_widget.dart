@@ -5,9 +5,9 @@ import '../../features/auth/presentaion/view/widgets/login_custom_paint.dart';
 import '../resources/managers_size.dart';
 
 // ignore: must_be_immutable
-class RigisterScreenWidget extends StatelessWidget {
+class AuthScreenWidget extends StatelessWidget {
   Widget? child;
-  RigisterScreenWidget({super.key, this.child});
+  AuthScreenWidget({super.key, this.child});
 
   @override
   Widget build(BuildContext context) {
