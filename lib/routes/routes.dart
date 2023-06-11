@@ -14,6 +14,8 @@ class Routes {
   static const String loginView = '/login_view';
   static const String registerView = '/register_view';
   static const String chooseAccountView = '/choose_account';
+  static const String forgotPasswordView = '/choose_account';
+
 }
 
 class RouteGenerator {
