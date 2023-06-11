@@ -1,5 +1,6 @@
 import 'package:games_organizing/config/dependency_injection.dart';
 import 'package:games_organizing/features/auth/presentaion/view/login_view.dart';
+import 'package:games_organizing/features/forgotPssword/presentaion/view/forgot_password_view.dart';
 import 'package:games_organizing/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +15,7 @@ class Routes {
   static const String loginView = '/login_view';
   static const String registerView = '/register_view';
   static const String chooseAccountView = '/choose_account';
-  static const String forgotPasswordView = '/choose_account';
-
+  static const String forgotPasswordView = '/forgot_password_view';
 }
 
 class RouteGenerator {
@@ -36,6 +36,9 @@ class RouteGenerator {
       case Routes.registerView:
         initRegisterView();
         return MaterialPageRoute(builder: (_) => RegisterView());
+      case Routes.forgotPasswordView:
+        initForgotPasswordView();
+        return MaterialPageRoute(builder: (_) => ForgotPassword());
       default:
         return unDefinedRoute();
     }
