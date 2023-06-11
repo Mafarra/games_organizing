@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:games_organizing/core/resources/manager_fonts.dart';
 import 'package:games_organizing/core/resources/manager_styles.dart';
 import 'package:games_organizing/core/resources/managers_size.dart';
+import 'package:games_organizing/routes/routes.dart';
 import 'package:get/get.dart';
 import '../../../../core/resources/manager_color.dart';
 import '../../../../core/resources/manager_strings.dart';
@@ -99,6 +100,8 @@ class LoginView extends StatelessWidget {
                               fontSize: ManagerFontSize.s14,
                               color: ManagerColors.grey),
                         ),
+                        onPressed: () =>
+                            Get.offAllNamed(Routes.forgotPasswordView),
                       ),
                       Row(
                         children: [
