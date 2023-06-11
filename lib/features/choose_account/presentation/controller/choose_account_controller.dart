@@ -1,19 +1,13 @@
 import 'package:get/get.dart';
 
+import '../../../../routes/routes.dart';
+
 class ChooseAccountController extends GetxController {
-  @override
-  void onInit() {
-    // TODO: implement onInit
-    super.onInit();
-  }
 
-  @override
-  void onClose() {
-    // TODO: implement onClose
-    super.onClose();
-  }
+  void gotoSigninScreen() => Get.offAllNamed(Routes.loginView);
+  void gotoRegisterScreen() => Get.offAllNamed(Routes.registerView);
 
-  void gotoSigninScreen() {}
-  void gotoSignupScreen() {}
-  void enterAsVisitor() {}
+  void enterAsVisitor() {
+    // save in shared pref user type is visitor
+  }
 }

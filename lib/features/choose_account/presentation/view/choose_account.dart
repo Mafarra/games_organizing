@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 import '../../../../core/resources/manager_color.dart';
 import '../../../../core/resources/managers_size.dart';
 import '../../../../routes/routes.dart';
+import '../controller/choose_account_controller.dart';
 
 class ChooseAccountView extends StatelessWidget {
   const ChooseAccountView({super.key});
@@ -38,66 +39,71 @@ class ChooseAccountView extends StatelessWidget {
           Container(
             padding: EdgeInsets.symmetric(
                 horizontal: ManagerHeight.h16, vertical: ManagerHeight.h60),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(
-                  ManagerStrings.chooseAccountText1,
-                  style: getMediumTextStyle(
-                    fontSize: 14,
-                    color: ManagerColors.white,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: ManagerHeight.h24,
-                ),
-                mainButton(
-                  color: ManagerColors.primaryColor,
-                  height: ManagerHeight.h48,
-                  minWidth: double.infinity,
-                  elevation: 0.1,
-                  shapeBorder: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Text(
-                    ManagerStrings.signIn,
-                    style: getMediumTextStyle(
-                        fontSize: 14, color: ManagerColors.white),
-                  ),
-                  onPressed: () => Get.offAllNamed(Routes.loginView),//TODO: use controller
-                ),
-                SizedBox(
-                  height: ManagerHeight.h16,
-                ),
-                mainButton(
-                  color: ManagerColors.white,
-                  height: ManagerHeight.h48,
-                  minWidth: double.infinity,
-                  elevation: 0.1,
-                  shapeBorder: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Text(
-                    ManagerStrings.signUp,
-                    style: getMediumTextStyle(
-                        fontSize: 14, color: ManagerColors.primaryColor),
-                  ),
-                ),
-                SizedBox(
-                  height: ManagerHeight.h24,
-                ),
-                mainButton(
-                  child: Text(
-                    ManagerStrings.chooseAccountText2,
-                    style: getMediumTextStyle(
-                      fontSize: 14,
-                      color: ManagerColors.white,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ],
-            ),
+            child: GetBuilder<ChooseAccountController>(
+                init: ChooseAccountController(),
+                builder: (controller) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        ManagerStrings.chooseAccountText1,
+                        style: getMediumTextStyle(
+                          fontSize: 14,
+                          color: ManagerColors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: ManagerHeight.h24,
+                      ),
+                      mainButton(
+                        color: ManagerColors.primaryColor,
+                        height: ManagerHeight.h48,
+                        minWidth: double.infinity,
+                        elevation: 0.1,
+                        shapeBorder: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Text(
+                          ManagerStrings.signIn,
+                          style: getMediumTextStyle(
+                              fontSize: 14, color: ManagerColors.white),
+                        ),
+                        onPressed: () => controller.gotoSigninScreen(),
+                      ),
+                      SizedBox(
+                        height: ManagerHeight.h16,
+                      ),
+                      mainButton(
+                        color: ManagerColors.white,
+                        height: ManagerHeight.h48,
+                        minWidth: double.infinity,
+                        elevation: 0.1,
+                        shapeBorder: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Text(
+                          ManagerStrings.signUp,
+                          style: getMediumTextStyle(
+                              fontSize: 14, color: ManagerColors.primaryColor),
+                        ),
+                        onPressed: () => controller.gotoRegisterScreen(),
+                      ),
+                      SizedBox(
+                        height: ManagerHeight.h24,
+                      ),
+                      mainButton(
+                        child: Text(
+                          ManagerStrings.chooseAccountText2,
+                          style: getMediumTextStyle(
+                            fontSize: 14,
+                            color: ManagerColors.white,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ],
+                  );
+                }),
           ),
         ],
       ),
