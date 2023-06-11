@@ -31,11 +31,17 @@ class ManagerStrings {
   static const String createAccount = 'إنشاء حساب';
   static const String ihaveAccount = 'لدي حساب سابق ؟';
   static const String createNewAccount = 'إنشاء حساب جديد';
-  static const String createYourAccountPlz ='!من فضلك, قم بتسجيل جميع  البيانات';
+  static const String createYourAccountPlz =
+      '!من فضلك, قم بتسجيل جميع  البيانات';
   static const String fullName = 'الإسم كامل';
   static const String birthDate = 'تاريخ الميلاد';
   static const String confirmPassword = 'تأكيد كلمة المرور';
   static const String fullNameHint = 'أحمد عبد العزيز';
   static const String selectGender = 'تحديد الجنس';
-  static const String agreePolicyConditons = 'أنا أوافق على جميع الشروط والأحكام';
+  static const String agreePolicyConditons =
+      'أنا أوافق على جميع الشروط والأحكام';
+  static const String reEnterPassword = 'إعادة تعيين كلمة المرور ؟';
+  static const String reEnterEmailpls = '''من فضلك, قم بإدخال بريدك الإلكتروني
+لإرسال رمز التحقق اليه''';
+  static const String send = 'إرسال';
 }
