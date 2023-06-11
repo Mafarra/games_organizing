@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
 import '../features/auth/presentaion/controller/registration_controller.dart';
 import '../features/choose_account/presentation/controller/choose_account_controller.dart';
+import '../features/forgotPssword/presentaion/controller/forgot_password_controller.dart';
 import '../features/splash/presentation/controller/splash_controller.dart';
 
 final instance = GetIt.instance;
@@ -57,6 +58,9 @@ disposeLoginView() {
 initRegisterView() {
   disposeLoginView();
   Get.put<RegisterController>(RegisterController());
+}
+initForgotPasswordView() {
+  Get.put<ForgotPasswordConteroller>(ForgotPasswordConteroller());
 }
 
 disposeRegisterView() {
