@@ -14,7 +14,7 @@ import '../../../../core/widgets/main_button.dart';
 import '../controller/forgot_password_controller.dart';
 
 class ForgotPassword extends StatelessWidget {
-  final FailedValidator _failedValidator = FailedValidator();
+  final FieldValidator _failedValidator = FieldValidator();
 
   ForgotPassword({super.key});
 
