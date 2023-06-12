@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
 import '../features/auth/presentaion/controller/registration_controller.dart';
 import '../features/choose_account/presentation/controller/choose_account_controller.dart';
+import '../features/email_code_verification/presentation/controller/verification_controller.dart';
 import '../features/forgotPssword/presentaion/controller/forgot_password_controller.dart';
 import '../features/splash/presentation/controller/splash_controller.dart';
 
@@ -45,9 +46,9 @@ disposeChooseAccountsView() {
 }
 
 initLoginView() {
-    disposeRegisterView();
-    disposeOutBoarding();
-    disposeChooseAccountsView();
+  disposeRegisterView();
+  disposeOutBoarding();
+  disposeChooseAccountsView();
   Get.put<LoginController>(LoginController());
 }
 
@@ -59,10 +60,25 @@ initRegisterView() {
   disposeLoginView();
   Get.put<RegisterController>(RegisterController());
 }
-initForgotPasswordView() {
-  Get.put<ForgotPasswordConteroller>(ForgotPasswordConteroller());
-}
 
 disposeRegisterView() {
   Get.delete<RegisterController>();
+}
+
+initForgotPasswordView() {
+  disposeLoginView();
+  Get.put<ForgotPasswordConteroller>(ForgotPasswordConteroller());
+}
+
+disposeForgotPasswordView() {
+  Get.delete<ForgotPasswordConteroller>();
+}
+
+initVerificationView() {
+  disposeForgotPasswordView();
+  Get.put<VereificationController>(VereificationController());
+}
+
+disposeVerificationView() {
+  Get.delete<VereificationController>();
 }

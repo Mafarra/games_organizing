@@ -37,4 +37,7 @@ class ManagerColors {
   static const Color inactiveColorIndicator = Colors.grey;
   static const Color textColorblackButton = Colors.white;
   static const Color transparent = Colors.transparent;
+  static const Color fillInputVerification = Color.fromARGB(0, 163, 40, 40);
+  static const Color focusedBorderInputVerification = primaryColor;
+  static const Color enabledBorderInputVerification = Colors.grey;
 }

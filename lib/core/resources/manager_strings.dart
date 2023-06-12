@@ -44,4 +44,11 @@ class ManagerStrings {
   static const String reEnterEmailpls = '''من فضلك, قم بإدخال بريدك الإلكتروني
 لإرسال رمز التحقق اليه''';
   static const String send = 'إرسال';
+  static const String invalidEmptyCode = "This field is required";
+  static const String verifyEmail = 'التحقق من البريد الإلكتروني';
+  static const String enterOtpCode =
+      'من فضلك, قم بإدخال رمز التفعيل الذي أرسلناه على  البريد الإلكتروني';
+  static const String verify = 'تفعيل';
+  static const String notSentYet = 'لم يرسل لي رمز التفعيل ؟';
+  static const String resendit = 'أعد الإرسال';
 }

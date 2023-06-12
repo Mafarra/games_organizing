@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import '../core/resources/manager_strings.dart';
 import '../features/auth/presentaion/view/register_view.dart';
 import '../features/choose_account/presentation/view/choose_Account.dart';
+import '../features/email_code_verification/presentation/view/verification_view.dart';
 import '../features/out_bording/presentation/view/out_boarding_view.dart';
 
 class Routes {
@@ -16,6 +17,7 @@ class Routes {
   static const String registerView = '/register_view';
   static const String chooseAccountView = '/choose_account';
   static const String forgotPasswordView = '/forgot_password_view';
+  static const String verificatinView = '/verification_view.dart';
 }
 
 class RouteGenerator {
@@ -39,6 +41,9 @@ class RouteGenerator {
       case Routes.forgotPasswordView:
         initForgotPasswordView();
         return MaterialPageRoute(builder: (_) => ForgotPassword());
+      case Routes.verificatinView:
+        initVerificationView();
+        return MaterialPageRoute(builder: (_) => VerificationView());
       default:
         return unDefinedRoute();
     }
