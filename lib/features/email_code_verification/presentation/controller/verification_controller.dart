@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/validator/validator.dart';
+import '../../../../routes/routes.dart';
 
 class VereificationController extends GetxController {
   late TextEditingController firstCodeTextController;
@@ -53,5 +54,9 @@ class VereificationController extends GetxController {
     fifthFocusNode.dispose();
     sixthFocusNode.dispose();
     formKey.currentState!.dispose();
+  }
+
+  void gotoResetPassScreen() {
+    Get.offAllNamed(Routes.resetPasswordView);
   }
 }

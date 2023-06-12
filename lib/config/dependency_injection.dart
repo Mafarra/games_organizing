@@ -6,7 +6,7 @@ import 'package:get_it/get_it.dart';
 import '../features/auth/presentaion/controller/registration_controller.dart';
 import '../features/choose_account/presentation/controller/choose_account_controller.dart';
 import '../features/email_code_verification/presentation/controller/verification_controller.dart';
-import '../features/forgotPssword/presentaion/controller/forgot_password_controller.dart';
+import '../features/forgotPassword/presentaion/controller/forgot_password_controller.dart';
 import '../features/splash/presentation/controller/splash_controller.dart';
 
 final instance = GetIt.instance;
@@ -80,5 +80,13 @@ initVerificationView() {
 }
 
 disposeVerificationView() {
+  Get.delete<VereificationController>();
+}
+initResetPassView() {
+  disposeForgotPasswordView();
+  Get.put<VereificationController>(VereificationController());
+}
+
+disposeResetPassView() {
   Get.delete<VereificationController>();
 }

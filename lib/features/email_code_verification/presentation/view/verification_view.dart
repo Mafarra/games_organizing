@@ -96,6 +96,7 @@ class VerificationView extends StatelessWidget {
                           onPressed: () {
                             //api
                             //got to resetpass screen
+                            controller.gotoResetPassScreen();
                           },
                         ),
                         SizedBox(

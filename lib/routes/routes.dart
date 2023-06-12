@@ -1,6 +1,6 @@
 import 'package:games_organizing/config/dependency_injection.dart';
 import 'package:games_organizing/features/auth/presentaion/view/login_view.dart';
-import 'package:games_organizing/features/forgotPssword/presentaion/view/forgot_password_view.dart';
+import 'package:games_organizing/features/forgotPassword/presentaion/view/forgot_password_view.dart';
 import 'package:games_organizing/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +9,7 @@ import '../features/auth/presentaion/view/register_view.dart';
 import '../features/choose_account/presentation/view/choose_Account.dart';
 import '../features/email_code_verification/presentation/view/verification_view.dart';
 import '../features/out_bording/presentation/view/out_boarding_view.dart';
+import '../features/reset_password/presentasion/view/reset_password.dart';
 
 class Routes {
   static const String splashView = '/splash_view';
@@ -18,6 +19,7 @@ class Routes {
   static const String chooseAccountView = '/choose_account';
   static const String forgotPasswordView = '/forgot_password_view';
   static const String verificatinView = '/verification_view.dart';
+  static const String resetPasswordView = '/reset_password.dart';
 }
 
 class RouteGenerator {
@@ -44,6 +46,9 @@ class RouteGenerator {
       case Routes.verificatinView:
         initVerificationView();
         return MaterialPageRoute(builder: (_) => VerificationView());
+      case Routes.resetPasswordView:
+        initVerificationView();
+        return MaterialPageRoute(builder: (_) => ResetPasswordView());
       default:
         return unDefinedRoute();
     }

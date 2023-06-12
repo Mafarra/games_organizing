@@ -22,6 +22,9 @@ class ManagerStrings {
   static const String welcomeAgain = '! أهلاً وسهلاً بك مرة أخرى';
   static const String email = 'البريد الإلكتروني';
   static const String password = 'كلمة المرور';
+  static const String newPassword = 'كلمة المرور الجديدة';
+  static const String confirmNewPassword = 'تأكيد كلمة المرور';
+  static const String resetPassword = 'إعادة تعيين كلمة المرور';
   static const String invalidEmail = 'Invalid Email';
   static const String invalidPassword = 'Invalid Password';
   static const String invalidEntry = 'Invalid Entry';
@@ -51,4 +54,10 @@ class ManagerStrings {
   static const String verify = 'تفعيل';
   static const String notSentYet = 'لم يرسل لي رمز التفعيل ؟';
   static const String resendit = 'أعد الإرسال';
+  static const String setPassword = 'تعيين كلمة مرور جديدة';
+  static const String newPasswordMustBeNotUsedBefor =
+      '''يجب أن تكون كلمة مرورك الجديدة مختلفة 
+عن كلمة المرور السابقة''';
+  static const String goBack = 'رجوع';
+  static const String successResetPassword = ' !لقد تم تغيير كلمة المرور بنجاح';
 }
