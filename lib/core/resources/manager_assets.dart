@@ -11,6 +11,7 @@ class ManagerAssets {
   static const loginillustration = "$imagePath/logillustration.svg";
   static const signupIllustration = "$imagePath/signupIllustration.svg";
   static const forgotPassIllustration = "$imagePath/Email-amico.svg";
+  static const authenticationIllustration = "$imagePath/Authentication.svg";
   static const male = "$imagePath/male.svg";
   static const female = "$imagePath/female.svg";
   static const chooseAccountPackground =
