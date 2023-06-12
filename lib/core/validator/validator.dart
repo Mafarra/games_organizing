@@ -1,7 +1,7 @@
 import 'package:get/get_utils/src/get_utils/get_utils.dart';
 import '../resources/manager_strings.dart';
 
-class FailedValidator {
+class FieldValidator {
   String? validateEmail(String? email) {
     if (email!.isEmpty) {
       return ManagerStrings.invalidEmail;
@@ -35,6 +35,12 @@ class FailedValidator {
       return ManagerStrings.invalidEntry;
     }
 
+    return null;
+  }
+    String? validateCode(value) {
+    if (value == null || value.trim().isEmpty) {
+      return ManagerStrings.invalidEmptyCode;
+    }
     return null;
   }
 }
