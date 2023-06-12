@@ -13,7 +13,7 @@ import '../../../../core/widgets/auth_screen_widget.dart';
 import '../controller/login_controller.dart';
 
 class LoginView extends StatelessWidget {
-  final FailedValidator _failedValidator = FailedValidator();
+  final FieldValidator _failedValidator = FieldValidator();
   LoginView({super.key});
   @override
   Widget build(BuildContext context) {
@@ -101,7 +101,9 @@ class LoginView extends StatelessWidget {
                               color: ManagerColors.grey),
                         ),
                         onPressed: () =>
-                            Get.offAllNamed(Routes.forgotPasswordView),
+                            // Get.offAllNamed(Routes.forgotPasswordView),
+                            //just for test
+                            Get.offAllNamed(Routes.verificatinView),
                       ),
                       Row(
                         children: [
