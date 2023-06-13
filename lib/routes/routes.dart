@@ -47,7 +47,7 @@ class RouteGenerator {
         initVerificationView();
         return MaterialPageRoute(builder: (_) => VerificationView());
       case Routes.resetPasswordView:
-        initVerificationView();
+        initResetPassView();
         return MaterialPageRoute(builder: (_) => ResetPasswordView());
       default:
         return unDefinedRoute();
