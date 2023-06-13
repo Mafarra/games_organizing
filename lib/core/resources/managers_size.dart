@@ -17,6 +17,7 @@ class ManagerHeight {
   static double h48 = SizeUtil.setHeight(48);
   static double h50 = SizeUtil.setHeight(50);
   static double h60 = SizeUtil.setHeight(60);
+  static double h70 = SizeUtil.setHeight(70);
   static double h71 = SizeUtil.setHeight(71);
   static double h85 = SizeUtil.setHeight(85);
   static double h200 = SizeUtil.setHeight(200);
@@ -71,6 +72,9 @@ class ManagerIconSize {
   static double s12 = 12;
   static double s20 = 20;
   static double s26 = 26;
+  static double s35 = 35;
+  static double s30 = 30;
+  static double s40 = 40;
 }
 
 class ManagerOpacity {

@@ -7,6 +7,7 @@ import '../features/auth/presentaion/controller/registration_controller.dart';
 import '../features/choose_account/presentation/controller/choose_account_controller.dart';
 import '../features/email_code_verification/presentation/controller/verification_controller.dart';
 import '../features/forgotPassword/presentaion/controller/forgot_password_controller.dart';
+import '../features/main/presentation/controller/main_controller.dart';
 import '../features/splash/presentation/controller/splash_controller.dart';
 
 final instance = GetIt.instance;
@@ -89,4 +90,8 @@ initResetPassView() {
 
 disposeResetPassView() {
   Get.delete<VereificationController>();
+}
+
+initMainModule() {
+  Get.put<MainController>(MainController());
 }
