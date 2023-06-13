@@ -3,7 +3,6 @@ import 'package:games_organizing/features/auth/presentaion/view/login_view.dart'
 import 'package:games_organizing/features/forgotPassword/presentaion/view/forgot_password_view.dart';
 import 'package:games_organizing/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/material.dart';
-
 import '../core/resources/manager_strings.dart';
 import '../features/auth/presentaion/view/register_view.dart';
 import '../features/choose_account/presentation/view/choose_Account.dart';
