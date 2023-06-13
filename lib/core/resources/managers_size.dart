@@ -39,7 +39,7 @@ class ManagerWidth {
   static double w18 = SizeUtil.setWidth(18);
   static double w20 = SizeUtil.setWidth(20);
   static double w22 = SizeUtil.setWidth(22);
-  static double w34  = SizeUtil.setWidth(34);
+  static double w34 = SizeUtil.setWidth(34);
   static double w38 = SizeUtil.setWidth(38);
   static double w50 = SizeUtil.setWidth(50);
   static double w64 = SizeUtil.setWidth(64);
@@ -57,6 +57,8 @@ class ManagerRadius {
   static double r8 = SizeUtil.setRadius(8);
   static double r10 = SizeUtil.setRadius(10);
   static double r12 = SizeUtil.setRadius(12);
+  static double r16 = SizeUtil.setRadius(16);
+  static double r26 = SizeUtil.setRadius(26);
   static double r30 = SizeUtil.setRadius(30);
 }
 
@@ -67,6 +69,8 @@ class ManagerIconSize {
   static double s8 = 8;
   static double s10 = 10;
   static double s12 = 12;
+  static double s20 = 20;
+  static double s26 = 26;
 }
 
 class ManagerOpacity {
