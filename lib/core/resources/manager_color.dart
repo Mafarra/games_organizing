@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 class ManagerColors {
   static const Color white = Colors.white;
+  static const Color greyWhite = Color(0xffF6F6F6);
   static const Color black = Colors.black;
   static const Color textColor = Color(0xFF072A33);
   static const Color textColorLight = Color(0xff525167);
   static const Color subTitleColor = Color(0xff839499);
-  static const Color primaryColor = Color(0xfff84444);
+  static const Color primaryColor = Color(0xffDA2F37);
   static const Color oldPrimaryColor = Color(0xffFFB300);
   static const Color borderSide = Color(0xff1A1919);
   static const Color buttonColorLight = Colors.black;
@@ -36,4 +37,7 @@ class ManagerColors {
   static const Color inactiveColorIndicator = Colors.grey;
   static const Color textColorblackButton = Colors.white;
   static const Color transparent = Colors.transparent;
+  static const Color fillInputVerification = Color.fromARGB(0, 163, 40, 40);
+  static const Color focusedBorderInputVerification = primaryColor;
+  static const Color enabledBorderInputVerification = Colors.grey;
 }

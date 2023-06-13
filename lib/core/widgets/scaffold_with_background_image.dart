@@ -6,17 +6,17 @@ import '../resources/manager_color.dart';
 Widget scaffoldWithBackGroundImage({
   required Widget child,
   Color backgroundColor = ManagerColors.primaryColor,
-  String image = ManagerAssets.background,
+  String? image,
 }) {
   return willPopScope(
     child: Scaffold(
-      backgroundColor: ManagerColors.background,
+      backgroundColor: backgroundColor,
       body: Container(
         decoration: BoxDecoration(
             color: backgroundColor,
-            image: const DecorationImage(
+            image:  DecorationImage(
                 image: AssetImage(
-                  ManagerAssets.background,
+                 image?? ManagerAssets.background,
                 ),
                 fit: BoxFit.cover)),
         child: child,

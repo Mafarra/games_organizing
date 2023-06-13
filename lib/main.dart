@@ -3,7 +3,6 @@ import 'package:games_organizing/core/service/theme_service.dart';
 import 'package:games_organizing/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'config/constants.dart';
 import 'config/dependency_injection.dart';
 

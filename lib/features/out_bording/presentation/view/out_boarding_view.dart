@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:games_organizing/core/extensions/extensions.dart';
@@ -31,13 +32,18 @@ class OutBordingView extends StatelessWidget {
                 return Column(
                   children: [
                     Expanded(
-                      child: PageView(
-                        controller: controller.pageController,
-                        onPageChanged: (index) =>
-                            controller.setCurrentPageIndex(index),
-                        children: [
-                          ...controller.pagesContent,
-                        ],
+                      child: Directionality(
+                        //this direction will be belong to the language
+                        textDirection: TextDirection.rtl,
+                        child: PageView(
+                          dragStartBehavior: DragStartBehavior.start,
+                          controller: controller.pageController,
+                          onPageChanged: (index) =>
+                              controller.setCurrentPageIndex(index),
+                          children: [
+                            ...controller.pagesContent,
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(

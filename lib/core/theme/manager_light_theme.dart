@@ -9,10 +9,11 @@ import '../resources/manager_text_theme_light.dart';
 ThemeData managerLightThemeData() {
   return ThemeData.light().copyWith(
     useMaterial3: true,
+
     /// MAON COLORS APP
     primaryColor: ManagerColors.primaryColor,
     primaryColorLight: ManagerColors.primaryColorLight,
-
+    
     //this for disabled button colors
     disabledColor: ManagerColors.textColor,
     splashColor: ManagerColors.greyLight,
@@ -33,7 +34,14 @@ ThemeData managerLightThemeData() {
       disabledColor: ManagerColors.greyLight,
       buttonColor: ManagerColors.buttonColorLight,
     ),
+    inputDecorationTheme: const InputDecorationTheme(
+     isDense: true,// this will remove the default content padding
+     // now you can customize it here or add padding widget
+     contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+  ),
+    //unselectedWidgetColor
+    unselectedWidgetColor: ManagerColors.greyWhite,
 
-    textTheme:  ManagerTextThemeLight(),
+    textTheme: ManagerTextThemeLight(),
   );
 }
