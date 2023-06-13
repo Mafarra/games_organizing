@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:games_organizing/core/resources/manager_styles.dart';
 import 'package:get/get.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
-import '../../../../core/resources/manager_assets.dart';
 import '../../../../core/resources/manager_color.dart';
+import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/resources/managers_size.dart';
 
 class MainController extends GetxController {
@@ -34,13 +34,13 @@ class MainController extends GetxController {
         fontSize: 12,
         color: ManagerColors.black,
       ),
-      title: 'الرئيسية',
+      title: ManagerStrings.settingsNav,
       icon: const Icon(
-        Icons.home,
+        Icons.settings,
       ),
+      iconSize: ManagerIconSize.s30,
       activeColorPrimary: ManagerColors.primaryColor,
       inactiveColorPrimary: ManagerColors.grey,
-      iconSize: ManagerIconSize.s30,
       inactiveColorSecondary: ManagerColors.grey,
     ),
     PersistentBottomNavBarItem(
@@ -49,7 +49,7 @@ class MainController extends GetxController {
         fontSize: 12,
         color: ManagerColors.black,
       ),
-      title: 'الرئيسية',
+      title: ManagerStrings.chalengesNav,
       icon: const Icon(
         Icons.emoji_events_rounded,
       ),
@@ -64,13 +64,13 @@ class MainController extends GetxController {
         fontSize: 12,
         color: ManagerColors.black,
       ),
-      title: 'الرئيسية',
+      title: ManagerStrings.mainNav,
       icon: const Icon(
-        Icons.settings,
+        Icons.home,
       ),
-      iconSize: ManagerIconSize.s30,
       activeColorPrimary: ManagerColors.primaryColor,
       inactiveColorPrimary: ManagerColors.grey,
+      iconSize: ManagerIconSize.s30,
       inactiveColorSecondary: ManagerColors.grey,
     ),
   ];
