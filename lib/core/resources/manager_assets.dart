@@ -4,6 +4,8 @@ const String jsonPath = "assets/json";
 class ManagerAssets {
   static const background = "$imagePath/background.png";
   static const logo = "$imagePath/logo.png";
+  static const String home = '$imagePath/home.png';
+  static const String challenges = '$imagePath/Challenges.png';
   static const logoPackground = "$imagePath/logo_packground.svg";
   static const illustration1 = "$imagePath/illustration1.svg";
   static const illustration2 = "$imagePath/illustration2.svg";
