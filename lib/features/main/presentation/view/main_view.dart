@@ -13,30 +13,28 @@ class MainView extends StatelessWidget {
     return willPopScope(
       child: GetBuilder<MainController>(
         builder: (controller) {
-          return Center(
-            child: Directionality(
-              textDirection: TextDirection.rtl,
-              child: PersistentTabView(
-                padding: const NavBarPadding.symmetric(vertical: 3,horizontal: 5),
-                context,
-                controller: controller.persistentTabController,
-                backgroundColor: Colors.white,
-                navBarStyle: NavBarStyle.style6,
-                confineInSafeArea: true,
-                navBarHeight: ManagerHeight.h70,
-                decoration: NavBarDecoration(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(
-                      ManagerRadius.r16,
-                    ),
-                    topRight: Radius.circular(
-                      ManagerRadius.r16,
-                    ),
+          return Directionality(
+            textDirection: TextDirection.rtl,
+            child: PersistentTabView(
+              padding: const NavBarPadding.symmetric(vertical: 3,horizontal: 5),
+              context,
+              controller: controller.persistentTabController,
+              backgroundColor: Colors.white,
+              navBarStyle: NavBarStyle.style6,
+              confineInSafeArea: true,
+              navBarHeight: ManagerHeight.h70,
+              decoration: NavBarDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(
+                    ManagerRadius.r16,
+                  ),
+                  topRight: Radius.circular(
+                    ManagerRadius.r16,
                   ),
                 ),
-                screens: controller.screens,
-                items: controller.bottomNavBarItems,
               ),
+              screens: controller.screens,
+              items: controller.bottomNavBarItems,
             ),
           );
         },

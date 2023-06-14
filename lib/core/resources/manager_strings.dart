@@ -63,4 +63,6 @@ class ManagerStrings {
   static const String mainNav = 'الرئيسية';
   static const String chalengesNav = 'التحديات';
   static const String settingsNav = 'الإعدادات';
+  static const String balootGame = 'بلوت';
+  static const String chessGame = 'شطرنج';
 }

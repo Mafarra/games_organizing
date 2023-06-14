@@ -20,4 +20,10 @@ class ManagerAssets {
   static const chooseAccountPackground =
       "$imagePath/choose_account_background.svg";
   static const chooseAccountPackgroundImage = "$imagePath/choose_acc_back.png";
+  static const profileAvatar =
+      "https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg";
+  static const balootGame =
+      "https://www.al-jazirah.com/2023/20230303/lp_82_1.jpg";
+  static const chessGame =
+      "https://media.istockphoto.com/id/1337857663/photo/businessman-playing-chess-game-indoors.jpg?s=170667a&w=0&k=20&c=g7M3JR6LWAAnmjZ9l6mC--_iadLNXOrymqPdtOcsDXs=";
 }
