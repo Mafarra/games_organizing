@@ -76,7 +76,7 @@ extension NonNullFunctionBool on bool Function()? {
 extension NonNullWidget on Widget? {
   Widget onNull() {
     if (this == null) {
-      return const SizedBox.shrink();
+      return const SizedBox();
     } else {
       return this!;
     }
