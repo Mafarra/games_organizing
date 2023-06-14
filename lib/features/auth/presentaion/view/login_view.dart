@@ -152,6 +152,7 @@ class LoginView extends StatelessWidget {
                     ),
                     onPressed: () {
                       //api login
+                      Get.offAllNamed(Routes.mainView);
                     },
                   ),
                   SizedBox(

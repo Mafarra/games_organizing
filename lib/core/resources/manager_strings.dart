@@ -60,4 +60,7 @@ class ManagerStrings {
 عن كلمة المرور السابقة''';
   static const String goBack = 'رجوع';
   static const String successResetPassword = ' !لقد تم تغيير كلمة المرور بنجاح';
+  static const String mainNav = 'الرئيسية';
+  static const String chalengesNav = 'التحديات';
+  static const String settingsNav = 'الإعدادات';
 }

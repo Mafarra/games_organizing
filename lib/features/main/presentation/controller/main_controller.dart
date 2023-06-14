@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:games_organizing/core/resources/manager_styles.dart';
 import 'package:get/get.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
-import '../../../../core/resources/manager_assets.dart';
 import '../../../../core/resources/manager_color.dart';
+import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/resources/managers_size.dart';
 
 class MainController extends GetxController {
@@ -13,9 +13,15 @@ class MainController extends GetxController {
   Color color = ManagerColors.black;
   List<Widget> screens = [
     // HomeView(),
-    Container(color: Colors.green,),
-    Container(color: Colors.yellowAccent,),
-    Container(color: Colors.blue,),
+    Container(
+      color: Colors.green,
+    ),
+    Container(
+      color: Colors.yellowAccent,
+    ),
+    Container(
+      color: Colors.blue,
+    ),
     // CategoryView(),
     // AppointmentView(),
     // ProfileView()
@@ -23,31 +29,49 @@ class MainController extends GetxController {
 
   List<PersistentBottomNavBarItem> bottomNavBarItems = [
     PersistentBottomNavBarItem(
-      icon: const ImageIcon(
-        AssetImage(
-          ManagerAssets.home,
-        ),
+      contentPadding: 10,
+      textStyle: getMediumTextStyle(
+        fontSize: 12,
+        color: ManagerColors.black,
       ),
-      activeColorPrimary: ManagerColors.primaryColor,
-      inactiveColorPrimary: ManagerColors.black,
-      iconSize: ManagerRadius.r26,
-    ),
-    
-    PersistentBottomNavBarItem(
-      icon: const ImageIcon(
-        AssetImage(
-          ManagerAssets.challenges,
-        ),
+      title: ManagerStrings.settingsNav,
+      icon: const Icon(
+        Icons.settings,
       ),
+      iconSize: ManagerIconSize.s30,
       activeColorPrimary: ManagerColors.primaryColor,
-      inactiveColorPrimary: ManagerColors.black,
-      iconSize: ManagerRadius.r26,
+      inactiveColorPrimary: ManagerColors.grey,
+      inactiveColorSecondary: ManagerColors.grey,
     ),
     PersistentBottomNavBarItem(
-      icon: Icon(Icons.settings,color: ManagerColors.grey,size:ManagerIconSize.s26,),
-      iconSize: ManagerIconSize.s26,
+      contentPadding: 10,
+      textStyle: getMediumTextStyle(
+        fontSize: 12,
+        color: ManagerColors.black,
+      ),
+      title: ManagerStrings.chalengesNav,
+      icon: const Icon(
+        Icons.emoji_events_rounded,
+      ),
       activeColorPrimary: ManagerColors.primaryColor,
-      inactiveColorPrimary: ManagerColors.black,
+      inactiveColorPrimary: ManagerColors.grey,
+      iconSize: ManagerIconSize.s35,
+      inactiveColorSecondary: ManagerColors.grey,
+    ),
+    PersistentBottomNavBarItem(
+      contentPadding: 10,
+      textStyle: getMediumTextStyle(
+        fontSize: 12,
+        color: ManagerColors.black,
+      ),
+      title: ManagerStrings.mainNav,
+      icon: const Icon(
+        Icons.home,
+      ),
+      activeColorPrimary: ManagerColors.primaryColor,
+      inactiveColorPrimary: ManagerColors.grey,
+      iconSize: ManagerIconSize.s30,
+      inactiveColorSecondary: ManagerColors.grey,
     ),
   ];
 }
