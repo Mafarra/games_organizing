@@ -34,15 +34,16 @@ class MainController extends GetxController {
         fontSize: 12,
         color: ManagerColors.black,
       ),
-      title: ManagerStrings.settingsNav,
+      title: ManagerStrings.mainNav,
       icon: const Icon(
-        Icons.settings,
+        Icons.home,
       ),
-      iconSize: ManagerIconSize.s30,
       activeColorPrimary: ManagerColors.primaryColor,
       inactiveColorPrimary: ManagerColors.grey,
+      iconSize: ManagerIconSize.s30,
       inactiveColorSecondary: ManagerColors.grey,
     ),
+
     PersistentBottomNavBarItem(
       contentPadding: 10,
       textStyle: getMediumTextStyle(
@@ -58,20 +59,22 @@ class MainController extends GetxController {
       iconSize: ManagerIconSize.s35,
       inactiveColorSecondary: ManagerColors.grey,
     ),
+    
     PersistentBottomNavBarItem(
       contentPadding: 10,
       textStyle: getMediumTextStyle(
         fontSize: 12,
         color: ManagerColors.black,
       ),
-      title: ManagerStrings.mainNav,
+      title: ManagerStrings.settingsNav,
       icon: const Icon(
-        Icons.home,
+        Icons.settings,
       ),
+      iconSize: ManagerIconSize.s30,
       activeColorPrimary: ManagerColors.primaryColor,
       inactiveColorPrimary: ManagerColors.grey,
-      iconSize: ManagerIconSize.s30,
       inactiveColorSecondary: ManagerColors.grey,
     ),
+    
   ];
 }
