@@ -6,6 +6,9 @@ import 'package:games_organizing/core/resources/manager_shadows.dart';
 import 'package:games_organizing/core/resources/manager_strings.dart';
 import 'package:games_organizing/core/resources/manager_styles.dart';
 import 'package:games_organizing/features/home/presentation/view/widgets/home_paint.dart';
+import 'package:games_organizing/routes/routes.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../../../../core/resources/manager_color.dart';
 import '../../../../core/resources/managers_size.dart';
 import '../../../../core/widgets/will_pop_scope.dart';
@@ -19,10 +22,10 @@ class HomeView extends StatelessWidget {
     return willPopScope(
       child: Scaffold(
         extendBody: true,
-        // extendBodyBehindAppBar: true,
         backgroundColor: ManagerColors.greyWhite,
         body: Stack(
           children: [
+            //background stack
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -65,7 +68,9 @@ class HomeView extends StatelessWidget {
                             color: ManagerColors.white),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.toNamed(Routes.notificatioView);
+                        },
                         icon: Stack(
                           children: [
                             Icon(

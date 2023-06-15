@@ -46,6 +46,7 @@ class ManagerWidth {
   static double w18 = SizeUtil.setWidth(18);
   static double w20 = SizeUtil.setWidth(20);
   static double w22 = SizeUtil.setWidth(22);
+  static double w26 = SizeUtil.setWidth(26);
   static double w34 = SizeUtil.setWidth(34);
   static double w38 = SizeUtil.setWidth(38);
   static double w50 = SizeUtil.setWidth(50);
@@ -53,7 +54,11 @@ class ManagerWidth {
   static double w64 = SizeUtil.setWidth(64);
   static double w75 = SizeUtil.setWidth(75);
   static double w90 = SizeUtil.setWidth(90);
+  static double w100 = SizeUtil.setWidth(100);
+  static double w120 = SizeUtil.setWidth(120);
+  static double w140 = SizeUtil.setWidth(140);
   static double w166 = SizeUtil.setWidth(166);
+  static double w136 = SizeUtil.setWidth(136);
   static double w178 = SizeUtil.setWidth(178);
   static double w247 = SizeUtil.setWidth(247);
   static double w302 = SizeUtil.setWidth(302);

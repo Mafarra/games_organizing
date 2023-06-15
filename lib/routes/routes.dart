@@ -9,6 +9,7 @@ import '../core/resources/manager_strings.dart';
 import '../features/auth/presentaion/view/register_view.dart';
 import '../features/choose_account/presentation/view/choose_Account.dart';
 import '../features/email_code_verification/presentation/view/verification_view.dart';
+import '../features/notification/presentation/view/notification_view.dart';
 import '../features/out_bording/presentation/view/out_boarding_view.dart';
 import '../features/reset_password/presentasion/view/reset_password.dart';
 
@@ -23,6 +24,7 @@ class Routes {
   static const String resetPasswordView = '/reset_password.dart';
   static const String mainView = '/main_view.dart';
   static const String homeView = '/home_view.dart';
+  static const String notificatioView = '/notification_view.dart';
 }
 
 class RouteGenerator {
@@ -46,6 +48,9 @@ class RouteGenerator {
       case Routes.homeView:
         // initMainModule();
         return MaterialPageRoute(builder: (_) => HomeView());
+      case Routes.notificatioView:
+        // initMainModule();
+        return MaterialPageRoute(builder: (_) => NotificationsView());
       case Routes.registerView:
         initRegisterView();
         return MaterialPageRoute(builder: (_) => RegisterView());

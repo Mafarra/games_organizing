@@ -65,4 +65,5 @@ class ManagerStrings {
   static const String settingsNav = 'الإعدادات';
   static const String balootGame = 'بلوت';
   static const String chessGame = 'شطرنج';
+  static const String notifications = 'الإشعارات';
 }
