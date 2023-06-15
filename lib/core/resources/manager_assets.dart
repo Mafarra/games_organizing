@@ -26,4 +26,6 @@ class ManagerAssets {
       "https://www.al-jazirah.com/2023/20230303/lp_82_1.jpg";
   static const chessGame =
       "https://media.istockphoto.com/id/1337857663/photo/businessman-playing-chess-game-indoors.jpg?s=170667a&w=0&k=20&c=g7M3JR6LWAAnmjZ9l6mC--_iadLNXOrymqPdtOcsDXs=";
+
+  static const comingSoon = "$jsonPath/coming-soon.json";
 }
