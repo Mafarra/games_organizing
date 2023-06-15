@@ -6,12 +6,9 @@ import 'package:games_organizing/core/resources/manager_shadows.dart';
 import 'package:games_organizing/core/resources/manager_strings.dart';
 import 'package:games_organizing/core/resources/manager_styles.dart';
 import 'package:games_organizing/features/home/presentation/view/widgets/home_paint.dart';
-
 import '../../../../core/resources/manager_color.dart';
 import '../../../../core/resources/managers_size.dart';
 import '../../../../core/widgets/will_pop_scope.dart';
-import '../../../auth/presentaion/view/widgets/custom_paint_child.dart';
-import '../../../auth/presentaion/view/widgets/login_custom_paint.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -49,183 +46,181 @@ class HomeView extends StatelessWidget {
                 left: ManagerWidth.w16,
                 right: ManagerWidth.w16,
               ),
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // first Row of screen
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(
-                          width: ManagerWidth.w50,
-                        ),
-                        Text(
-                          ManagerStrings.mainNav,
-                          style: getMediumTextStyle(
-                              fontSize: ManagerFontSize.s16,
-                              color: ManagerColors.white),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: Stack(
-                            children: [
-                              Icon(
-                                Icons.notifications,
-                                size: ManagerIconSize.s30,
-                                color: ManagerColors.white,
-                              ),
-                              Visibility(
-                                visible:
-                                    true, //TODO: this will change belongs to notifications list
-                                child: Positioned(
-                                  top: 4,
-                                  right: 3,
-                                  child: CircleAvatar(
-                                    radius: 6,
-                                    backgroundColor: ManagerColors.white,
-                                    child: Container(
-                                      width: 8,
-                                      height: 8,
-                                      decoration: const BoxDecoration(
-                                        color: ManagerColors.primaryColor,
-                                        shape: BoxShape.circle,
-                                      ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // first Row of screen
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: ManagerWidth.w50,
+                      ),
+                      Text(
+                        ManagerStrings.mainNav,
+                        style: getMediumTextStyle(
+                            fontSize: ManagerFontSize.s16,
+                            color: ManagerColors.white),
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: Stack(
+                          children: [
+                            Icon(
+                              Icons.notifications,
+                              size: ManagerIconSize.s30,
+                              color: ManagerColors.white,
+                            ),
+                            Visibility(
+                              visible:
+                                  true, //TODO: this will change belongs to notifications list
+                              child: Positioned(
+                                top: 4,
+                                right: 3,
+                                child: CircleAvatar(
+                                  radius: 6,
+                                  backgroundColor: ManagerColors.white,
+                                  child: Container(
+                                    width: 8,
+                                    height: 8,
+                                    decoration: const BoxDecoration(
+                                      color: ManagerColors.primaryColor,
+                                      shape: BoxShape.circle,
                                     ),
                                   ),
                                 ),
                               ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  // home card info
+                  Container(
+                    margin: EdgeInsets.only(top: ManagerHeight.h48),
+                    width: ManagerWidth.w343,
+                    height: ManagerHeight.h184,
+                    decoration: BoxDecoration(
+                      boxShadow: ManagerShadows.mainBoxShadow,
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(ManagerRadius.r16),
+                    ),
+                    child: Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(
+                            right: ManagerWidth.w18,
+                            bottom: ManagerHeight.h26,
+                          ),
+                          //user info and avatar
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              //profile avatar
+                              Container(
+                                padding: const EdgeInsets.all(2),
+                                margin: const EdgeInsets.only(left: 10),
+                                width: ManagerWidth.w58,
+                                height: ManagerHeight.h58,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.red,
+                                    width: 2.0,
+                                  ),
+                                ),
+                                child: const CircleAvatar(
+                                  backgroundImage:
+                                      NetworkImage(ManagerAssets.profileAvatar),
+                                ),
+                              ),
+                              //user info
+                              Container(
+                                margin: EdgeInsets.only(
+                                  top: ManagerHeight.h18,
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'أحمد عبد العزيز محمد',
+                                      style: getMediumTextStyle(
+                                          fontSize: 14, color: Colors.black),
+                                    ),
+                                    Text(
+                                      'Example@gmail.com',
+                                      style: getRegularTextStyle(
+                                          fontSize: 12,
+                                          color: ManagerColors.grey),
+                                    ),
+                                    Text(
+                                      'ID:85236',
+                                      style: getRegularTextStyle(
+                                          fontSize: 12,
+                                          color: ManagerColors.grey),
+                                    ),
+                                  ],
+                                ),
+                              )
                             ],
+                          ),
+                        ),
+                        //card of Reserved games count.
+                        Center(
+                          child: Container(
+                            margin: EdgeInsets.symmetric(
+                                horizontal: ManagerWidth.w75),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: ManagerWidth.w20,
+                                vertical: ManagerHeight.h8),
+                            decoration: BoxDecoration(
+                              color: ManagerColors.primaryColor,
+                              borderRadius:
+                                  BorderRadius.circular(ManagerRadius.r8),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'الألعاب المحجوزة :',
+                                  style: getMediumTextStyle(
+                                      fontSize: 12, color: Colors.white),
+                                ),
+                                Text(
+                                  ' 3 ',
+                                  style: getMediumTextStyle(
+                                      fontSize: 14, color: ManagerColors.white),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
                     ),
-                    // home card info
-                    Container(
-                      margin: EdgeInsets.only(top: ManagerHeight.h48),
-                      width: ManagerWidth.w343,
-                      height: ManagerHeight.h184,
-                      decoration: BoxDecoration(
-                        boxShadow: ManagerShadows.mainBoxShadow,
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(ManagerRadius.r16),
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(
-                              right: ManagerWidth.w18,
-                              bottom: ManagerHeight.h26,
-                            ),
-                            //user info and avatar
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                //profile avatar
-                                Container(
-                                  padding: const EdgeInsets.all(2),
-                                  margin: const EdgeInsets.only(left: 10),
-                                  width: ManagerWidth.w58,
-                                  height: ManagerHeight.h58,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                      color: Colors.red,
-                                      width: 2.0,
-                                    ),
-                                  ),
-                                  child: const CircleAvatar(
-                                    backgroundImage: NetworkImage(
-                                        ManagerAssets.profileAvatar),
-                                  ),
-                                ),
-                                //user info
-                                Container(
-                                  margin: EdgeInsets.only(
-                                    top: ManagerHeight.h18,
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'أحمد عبد العزيز محمد',
-                                        style: getMediumTextStyle(
-                                            fontSize: 14, color: Colors.black),
-                                      ),
-                                      Text(
-                                        'Example@gmail.com',
-                                        style: getRegularTextStyle(
-                                            fontSize: 12,
-                                            color: ManagerColors.grey),
-                                      ),
-                                      Text(
-                                        'ID:85236',
-                                        style: getRegularTextStyle(
-                                            fontSize: 12,
-                                            color: ManagerColors.grey),
-                                      ),
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                          //card of Reserved games count.
-                          Center(
-                            child: Container(
-                              margin: EdgeInsets.symmetric(
-                                  horizontal: ManagerWidth.w75),
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: ManagerWidth.w20,
-                                  vertical: ManagerHeight.h8),
-                              decoration: BoxDecoration(
-                                color: ManagerColors.primaryColor,
-                                borderRadius:
-                                    BorderRadius.circular(ManagerRadius.r8),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'الألعاب المحجوزة :',
-                                    style: getMediumTextStyle(
-                                        fontSize: 12, color: Colors.white),
-                                  ),
-                                  Text(
-                                    ' 3 ',
-                                    style: getMediumTextStyle(
-                                        fontSize: 14,
-                                        color: ManagerColors.white),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(
+                        right: ManagerWidth.w14,
+                        top: ManagerHeight.h26,
+                        bottom: ManagerHeight.h14),
+                    child: Text(
+                      'قائمة الألعاب المتوفرة',
+                      style: getRegularTextStyle(
+                          fontSize: 14, color: ManagerColors.black),
                     ),
-                    Container(
-                      padding: EdgeInsets.only(
-                          right: ManagerWidth.w14,
-                          top: ManagerHeight.h26,
-                          bottom: ManagerHeight.h14),
-                      child: Text(
-                        'قائمة الألعاب المتوفرة',
-                        style: getRegularTextStyle(
-                            fontSize: 14, color: ManagerColors.black),
-                      ),
-                    ),
-                    ListView(
+                  ),
+                  Expanded(
+                    child: ListView(
                       padding: EdgeInsets.only(top: 2, bottom: 40),
                       shrinkWrap: true,
                       children: gameCards,
-                    )
-                  ],
-                ),
+                    ),
+                  )
+                ],
               ),
             ),
           ],
