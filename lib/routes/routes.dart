@@ -1,8 +1,10 @@
 import 'package:games_organizing/config/dependency_injection.dart';
 import 'package:games_organizing/features/auth/presentaion/view/login_view.dart';
+import 'package:games_organizing/features/challenges/presentation/view/challenges_view.dart';
 import 'package:games_organizing/features/forgotPassword/presentaion/view/forgot_password_view.dart';
 import 'package:games_organizing/features/home/presentation/view/home_view.dart';
 import 'package:games_organizing/features/main/presentation/view/main_view.dart';
+import 'package:games_organizing/features/settings/presentation/view/settings_view.dart';
 import 'package:games_organizing/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/material.dart';
 import '../core/resources/manager_strings.dart';
@@ -25,6 +27,8 @@ class Routes {
   static const String mainView = '/main_view.dart';
   static const String homeView = '/home_view.dart';
   static const String notificatioView = '/notification_view.dart';
+  static const String challengesView = '/challenges_view.dart';
+  static const String settingsView = '/settings_view.dart';
 }
 
 class RouteGenerator {
@@ -46,11 +50,17 @@ class RouteGenerator {
         initMainModule();
         return MaterialPageRoute(builder: (_) => MainView());
       case Routes.homeView:
-        // initMainModule();
+        // init------();
         return MaterialPageRoute(builder: (_) => HomeView());
       case Routes.notificatioView:
-        // initMainModule();
+        // init------();
         return MaterialPageRoute(builder: (_) => NotificationsView());
+      case Routes.challengesView:
+        // init------();
+        return MaterialPageRoute(builder: (_) => ChallengesView());
+      case Routes.settingsView:
+        // init------();
+        return MaterialPageRoute(builder: (_) => SettingsView());
       case Routes.registerView:
         initRegisterView();
         return MaterialPageRoute(builder: (_) => RegisterView());

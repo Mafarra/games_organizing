@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
 
-class HomeConteroller extends GetxController{
+class HomeViewConteroller extends GetxController{
   
 }

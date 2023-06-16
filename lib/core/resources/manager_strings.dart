@@ -66,4 +66,8 @@ class ManagerStrings {
   static const String balootGame = 'بلوت';
   static const String chessGame = 'شطرنج';
   static const String notifications = 'الإشعارات';
+  static const String allSettings = 'الإعدادات العامة';
+  static const String userPlace = 'موقع المستخدم الحالي';
+  static const String signOut = 'تسجيل الخروج';
+  static const String privacyPolucy = 'الشروط والأحكام';
 }

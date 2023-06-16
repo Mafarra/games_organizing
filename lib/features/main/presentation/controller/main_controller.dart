@@ -7,6 +7,7 @@ import '../../../../core/resources/manager_strings.dart';
 import '../../../../core/resources/managers_size.dart';
 import '../../../challenges/presentation/view/challenges_view.dart';
 import '../../../home/presentation/view/home_view.dart';
+import '../../../settings/presentation/view/settings_view.dart';
 
 class MainController extends GetxController {
   PersistentTabController persistentTabController =
@@ -15,19 +16,8 @@ class MainController extends GetxController {
   Color color = ManagerColors.black;
   List<Widget> screens = [
     const HomeView(),
-    // Container(
-    //   color: Colors.green,
-    // ),
     const ChallengesView(),
-    // Container(
-    //   color: Colors.yellowAccent,
-    // ),
-    Container(
-      color: Colors.blue,
-    ),
-    // CategoryView(),
-    // AppointmentView(),
-    // ProfileView()
+    const SettingsView(),
   ];
 
   List<PersistentBottomNavBarItem> bottomNavBarItems = [

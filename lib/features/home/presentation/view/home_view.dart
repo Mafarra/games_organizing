@@ -11,6 +11,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import '../../../../core/resources/manager_color.dart';
 import '../../../../core/resources/managers_size.dart';
+import '../../../../core/widgets/user_info_widget.dart';
 import '../../../../core/widgets/will_pop_scope.dart';
 
 class HomeView extends StatelessWidget {
@@ -121,57 +122,8 @@ class HomeView extends StatelessWidget {
                             bottom: ManagerHeight.h26,
                           ),
                           //user info and avatar
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              //profile avatar
-                              Container(
-                                padding: const EdgeInsets.all(2),
-                                margin: const EdgeInsets.only(left: 10),
-                                width: ManagerWidth.w58,
-                                height: ManagerHeight.h58,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                    color: Colors.red,
-                                    width: 2.0,
-                                  ),
-                                ),
-                                child: const CircleAvatar(
-                                  backgroundImage:
-                                      NetworkImage(ManagerAssets.profileAvatar),
-                                ),
-                              ),
-                              //user info
-                              Container(
-                                margin: EdgeInsets.only(
-                                  top: ManagerHeight.h18,
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'أحمد عبد العزيز محمد',
-                                      style: getMediumTextStyle(
-                                          fontSize: 14, color: Colors.black),
-                                    ),
-                                    Text(
-                                      'Example@gmail.com',
-                                      style: getRegularTextStyle(
-                                          fontSize: 12,
-                                          color: ManagerColors.grey),
-                                    ),
-                                    Text(
-                                      'ID:85236',
-                                      style: getRegularTextStyle(
-                                          fontSize: 12,
-                                          color: ManagerColors.grey),
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
+                          child: UserInfoWidget(
+                            isSettingsView: false,
                           ),
                         ),
                         //card of Reserved games count.
