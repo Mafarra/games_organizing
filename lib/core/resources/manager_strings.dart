@@ -70,4 +70,6 @@ class ManagerStrings {
   static const String userPlace = 'موقع المستخدم الحالي';
   static const String signOut = 'تسجيل الخروج';
   static const String privacyPolucy = 'الشروط والأحكام';
+  static const String appLanguage = 'لغة التطبيق';
+  static const String appTheme = 'ثيم التطبيق';
 }

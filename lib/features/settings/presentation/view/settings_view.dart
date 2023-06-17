@@ -26,11 +26,10 @@ class SettingsView extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsetsDirectional.only(
-              top: ManagerHeight.h36,
               start: ManagerWidth.w16,
-              bottom: ManagerHeight.h24,
+              bottom: ManagerHeight.h16,
             ),
-            height: ManagerHeight.h152,
+            height: ManagerHeight.h144,
             color: ManagerColors.greyWhite,
             child: UserInfoWidget(
               isSettingsView: true,
@@ -68,8 +67,9 @@ class SettingsView extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       CustomListTile(
-                        title: 'لغة التطبيق',
-                        subTitle: 'العربية',
+                        title: ManagerStrings.appLanguage,
+                        subTitle:
+                            'العربية', //this will changed using controller
                         trailing: Container(
                           height: ManagerHeight.h26,
                           width: ManagerHeight.h26,
@@ -100,8 +100,8 @@ class SettingsView extends StatelessWidget {
                       ),
                       const CustomDivider(),
                       CustomListTile(
-                        title: 'ثيم التطبيق',
-                        subTitle: 'فاتح',
+                        title: ManagerStrings.appTheme,
+                        subTitle: 'فاتح', //this will changed using controller
                         trailing: SizedBox(
                           width: ManagerWidth.w34,
                           height: ManagerHeight.h14,
@@ -132,7 +132,7 @@ class SettingsView extends StatelessWidget {
                       ),
                       const CustomDivider(),
                       CustomListTile(
-                        title: 'الإشعارات',
+                        title: ManagerStrings.notifications,
                         // subTitle: 'فاتح',
                         trailing: SizedBox(
                           width: ManagerWidth.w34,
@@ -189,7 +189,8 @@ class SettingsView extends StatelessWidget {
                       const CustomDivider(),
                       CustomListTile(
                         title: ManagerStrings.userPlace,
-                        subTitle: 'جدة, شارع التحلية',
+                        subTitle:
+                            'جدة, شارع التحلية', //this will changed using controller
                         leading: Container(
                           width: ManagerWidth.w42,
                           height: ManagerHeight.h40,
