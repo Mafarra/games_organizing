@@ -40,6 +40,7 @@ class SettingsView extends StatelessWidget {
                 vertical: ManagerHeight.h18, horizontal: ManagerWidth.w16),
             child: Column(
               children: [
+                //title
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -189,8 +190,7 @@ class SettingsView extends StatelessWidget {
                       const CustomDivider(),
                       CustomListTile(
                         title: ManagerStrings.userPlace,
-                        subTitle:
-                            'جدة, شارع التحلية', //this will changed using controller
+                        subTitle:'جدة, شارع التحلية', //this will changed using controller
                         leading: Container(
                           width: ManagerWidth.w42,
                           height: ManagerHeight.h40,
