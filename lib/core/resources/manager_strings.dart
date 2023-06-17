@@ -63,4 +63,13 @@ class ManagerStrings {
   static const String mainNav = 'الرئيسية';
   static const String chalengesNav = 'التحديات';
   static const String settingsNav = 'الإعدادات';
+  static const String balootGame = 'بلوت';
+  static const String chessGame = 'شطرنج';
+  static const String notifications = 'الإشعارات';
+  static const String allSettings = 'الإعدادات العامة';
+  static const String userPlace = 'موقع المستخدم الحالي';
+  static const String signOut = 'تسجيل الخروج';
+  static const String privacyPolucy = 'الشروط والأحكام';
+  static const String appLanguage = 'لغة التطبيق';
+  static const String appTheme = 'ثيم التطبيق';
 }

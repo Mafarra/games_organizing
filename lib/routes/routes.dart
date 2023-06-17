@@ -1,13 +1,17 @@
 import 'package:games_organizing/config/dependency_injection.dart';
 import 'package:games_organizing/features/auth/presentaion/view/login_view.dart';
+import 'package:games_organizing/features/challenges/presentation/view/challenges_view.dart';
 import 'package:games_organizing/features/forgotPassword/presentaion/view/forgot_password_view.dart';
+import 'package:games_organizing/features/home/presentation/view/home_view.dart';
 import 'package:games_organizing/features/main/presentation/view/main_view.dart';
+import 'package:games_organizing/features/settings/presentation/view/settings_view.dart';
 import 'package:games_organizing/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/material.dart';
 import '../core/resources/manager_strings.dart';
 import '../features/auth/presentaion/view/register_view.dart';
 import '../features/choose_account/presentation/view/choose_Account.dart';
 import '../features/email_code_verification/presentation/view/verification_view.dart';
+import '../features/notification/presentation/view/notification_view.dart';
 import '../features/out_bording/presentation/view/out_boarding_view.dart';
 import '../features/reset_password/presentasion/view/reset_password.dart';
 
@@ -21,6 +25,10 @@ class Routes {
   static const String verificatinView = '/verification_view.dart';
   static const String resetPasswordView = '/reset_password.dart';
   static const String mainView = '/main_view.dart';
+  static const String homeView = '/home_view.dart';
+  static const String notificatioView = '/notification_view.dart';
+  static const String challengesView = '/challenges_view.dart';
+  static const String settingsView = '/settings_view.dart';
 }
 
 class RouteGenerator {
@@ -41,6 +49,18 @@ class RouteGenerator {
       case Routes.mainView:
         initMainModule();
         return MaterialPageRoute(builder: (_) => MainView());
+      case Routes.homeView:
+        // init------();
+        return MaterialPageRoute(builder: (_) => HomeView());
+      case Routes.notificatioView:
+        // init------();
+        return MaterialPageRoute(builder: (_) => NotificationsView());
+      case Routes.challengesView:
+        // init------();
+        return MaterialPageRoute(builder: (_) => ChallengesView());
+      case Routes.settingsView:
+        // init------();
+        return MaterialPageRoute(builder: (_) => SettingsView());
       case Routes.registerView:
         initRegisterView();
         return MaterialPageRoute(builder: (_) => RegisterView());
