@@ -1,15 +1,17 @@
-
 import 'package:flutter/material.dart';
 import 'package:games_organizing/core/extensions/extensions.dart';
+import 'package:games_organizing/features/game_reservation/domain/game_model.dart';
 import '../../../../../core/resources/manager_color.dart';
 import '../../../../../core/resources/manager_fonts.dart';
 import '../../../../../core/resources/manager_styles.dart';
 import '../../../../../core/resources/managers_size.dart';
 
 class GameCard extends StatelessWidget {
-  final String? gameName;
-  final String? gameImage;
-  const GameCard({super.key, required this.gameName, required this.gameImage});
+  final GameModel? gameModel;
+  const GameCard({
+    super.key,
+    required this.gameModel,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class GameCard extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(ManagerRadius.r16),
             child: Image.network(
-              gameImage.onNull(),
+              gameModel!.image.onNull(),
               fit: BoxFit.cover,
               width: double.infinity,
               height: ManagerHeight.h144,
@@ -43,7 +45,7 @@ class GameCard extends StatelessWidget {
                 ),
               ),
               child: Text(
-                gameName.onNull(),
+                gameModel!.name.onNull(),
                 style: getMediumTextStyle(
                     fontSize: ManagerFontSize.s14, color: ManagerColors.white),
               ),

@@ -1,3 +1,4 @@
+import 'package:games_organizing/features/game_reservation/domain/game_model.dart';
 import 'package:get/get.dart';
 import '../../../../core/resources/manager_assets.dart';
 import '../../../../core/resources/manager_strings.dart';
@@ -6,17 +7,12 @@ import '../view/widgets/game_card.dart';
 class HomeViewConteroller extends GetxController{
   int reservationGameCount = 0;
   List<GameCard> gameCards = [
-  const GameCard(
-    gameImage: ManagerAssets.balootGame,
-    gameName: ManagerStrings.balootGame,
+   GameCard(
+    gameModel: GameModel(name: ManagerStrings.balootGame,image:ManagerAssets.balootGame,),
   ),
-  const GameCard(
-    gameImage: ManagerAssets.chessGame,
-    gameName: ManagerStrings.chessGame,
+   GameCard(
+    gameModel: GameModel(name: ManagerStrings.chessGame,image:ManagerAssets.chessGame,),
   ),
-  const GameCard(
-    gameImage: ManagerAssets.balootGame,
-    gameName: ManagerStrings.balootGame,
-  ),
+  
 ];
 }

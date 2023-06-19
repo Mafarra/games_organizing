@@ -5,6 +5,8 @@ import 'package:games_organizing/core/resources/manager_fonts.dart';
 import 'package:games_organizing/core/resources/manager_shadows.dart';
 import 'package:games_organizing/core/resources/manager_strings.dart';
 import 'package:games_organizing/core/resources/manager_styles.dart';
+import 'package:games_organizing/features/game_reservation/domain/game_model.dart';
+import 'package:games_organizing/features/game_reservation/presentation/view/game_reservation.dart';
 import 'package:games_organizing/features/home/presentation/view/widgets/game_card.dart';
 import 'package:games_organizing/features/home/presentation/view/widgets/home_paint.dart';
 import 'package:games_organizing/routes/routes.dart';
@@ -185,14 +187,20 @@ class HomeView extends StatelessWidget {
                           child: ListView.builder(
                             padding: const EdgeInsets.only(top: 2, bottom: 40),
                             shrinkWrap: true,
+                            itemCount: controller.gameCards.length,
                             itemBuilder: (context, index) {
                               return InkWell(
-                                onTap: (){},
+                                onTap: () {
+                                  GameModel gameModel =
+                                      controller.gameCards[index].gameModel!;
+                                  Get.to(GameReservation(
+                                    gameModel: gameModel,
+                                  ));
+                                },
                                 child: GameCard(
-                                    gameName:
-                                        controller.gameCards[index].gameName,
-                                    gameImage:
-                                        controller.gameCards[index].gameImage),
+                                  gameModel:
+                                      controller.gameCards[index].gameModel,
+                                ),
                               );
                             },
                           ),
