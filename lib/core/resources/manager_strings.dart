@@ -72,4 +72,6 @@ class ManagerStrings {
   static const String privacyPolucy = 'الشروط والأحكام';
   static const String appLanguage = 'لغة التطبيق';
   static const String appTheme = 'ثيم التطبيق';
+  static const String availableGameMenue = 'قائمة الألعاب المتوفرة';
+  static const String reservationGames = 'الألعاب المحجوزة :';
 }
