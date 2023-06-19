@@ -74,4 +74,12 @@ class ManagerStrings {
   static const String appTheme = 'ثيم التطبيق';
   static const String availableGameMenue = 'قائمة الألعاب المتوفرة';
   static const String reservationGames = 'الألعاب المحجوزة :';
+  static const String gameCoffees = ' كافيهات لعبة ';
+  static const String hello = " مرحبًا, ";
+  static const String currentPosstion = 'موقعك الحالي';
+  static const String searchTextFieldHint = '....إبحث عن الكافي الذي تريده';
+  static const String real = 'ريال ';
+  static const String player = 'لاعب ';
+  static const String open = 'مفتوح ';
+  static const String closed = 'مغلق ';
 }

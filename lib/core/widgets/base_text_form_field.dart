@@ -13,6 +13,7 @@ TextFormField baseTextFormField({
   validator,
   Widget? icon,
   Widget? prefixIcon,
+  Color? outlineInputBorder,
 }) {
   return TextFormField(
     style: getRegularTextStyle(
@@ -20,16 +21,17 @@ TextFormField baseTextFormField({
       color: ManagerColors.black,
     ),
     textAlign: TextAlign.start,
-    textDirection: TextDirection.rtl, //TODO:this will be Checked by the app language
+    textDirection:
+        TextDirection.rtl, //TODO:this will be Checked by the app language
     controller: controller,
     keyboardType: keyboardType,
     cursorColor: ManagerColors.primaryColor,
     obscureText: obscureText.onNull(),
     validator: validator,
     decoration: InputDecoration(
-      prefixIcon: prefixIcon,// 
+      prefixIcon: prefixIcon, //
       suffixIcon: icon.onNull(),
-      suffixIconColor:  ManagerColors.grey,
+      suffixIconColor: ManagerColors.grey,
       filled: true,
       contentPadding: EdgeInsets.symmetric(
         // horizontal: ManagerWidth.w16,
@@ -37,14 +39,15 @@ TextFormField baseTextFormField({
       ),
       fillColor: ManagerColors.greyWhite,
       hintText: hintText.onNull(),
-      hintTextDirection: TextDirection.rtl, //TODO: this will be Checked by the app language
+      hintTextDirection:
+          TextDirection.rtl, //TODO: this will be Checked by the app language
       hintStyle: getRegularTextStyle(
         fontSize: ManagerFontSize.s16,
         color: ManagerColors.grey,
       ),
       enabledBorder: OutlineInputBorder(
-        borderSide: const BorderSide(
-          color: ManagerColors.white,
+        borderSide: BorderSide(
+          color: outlineInputBorder ?? ManagerColors.white,
         ),
         borderRadius: BorderRadius.circular(
           ManagerRadius.r6,

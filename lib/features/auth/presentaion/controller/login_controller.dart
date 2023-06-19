@@ -31,4 +31,20 @@ class LoginController extends GetxController {
   gotoRigisterScreen() {
     Get.offAllNamed(Routes.registerView);
   }
+
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    super.onInit();
+    email = TextEditingController();
+    password = TextEditingController();
+  }
+
+  @override
+  void onClose() {
+    // TODO: implement onClose
+    super.onClose();
+    email.dispose();
+    password.dispose();
+  }
 }
