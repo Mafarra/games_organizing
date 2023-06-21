@@ -2,7 +2,7 @@ import 'package:games_organizing/config/dependency_injection.dart';
 import 'package:games_organizing/features/auth/presentaion/view/login_view.dart';
 import 'package:games_organizing/features/challenges/presentation/view/challenges_view.dart';
 import 'package:games_organizing/features/forgotPassword/presentaion/view/forgot_password_view.dart';
-import 'package:games_organizing/features/game_reservation/presentation/view/near_coffees.dart';
+import 'package:games_organizing/features/near_coffee/presentation/view/near_coffees.dart';
 import 'package:games_organizing/features/home/presentation/view/home_view.dart';
 import 'package:games_organizing/features/main/presentation/view/main_view.dart';
 import 'package:games_organizing/features/settings/presentation/view/settings_view.dart';

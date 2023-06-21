@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:games_organizing/core/extensions/extensions.dart';
-import 'package:games_organizing/features/game_reservation/domain/game_model.dart';
+import 'package:games_organizing/features/near_coffee/domain/game_model.dart';
 import '../../../../../core/resources/manager_color.dart';
 import '../../../../../core/resources/manager_fonts.dart';
 import '../../../../../core/resources/manager_styles.dart';

@@ -1,4 +1,4 @@
-import 'package:games_organizing/features/game_reservation/domain/game_model.dart';
+import 'package:games_organizing/features/near_coffee/domain/game_model.dart';
 import 'package:get/get.dart';
 import '../../../../core/resources/manager_assets.dart';
 import '../../../../core/resources/manager_strings.dart';

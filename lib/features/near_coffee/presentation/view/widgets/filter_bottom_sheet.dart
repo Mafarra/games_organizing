@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:games_organizing/core/widgets/main_button.dart';
-import 'package:games_organizing/features/game_reservation/presentation/view/widgets/price_slider.dart';
-import 'package:games_organizing/features/game_reservation/presentation/view/widgets/sort_filter_box.dart';
+import 'package:games_organizing/features/near_coffee/presentation/view/widgets/price_slider.dart';
+import 'package:games_organizing/features/near_coffee/presentation/view/widgets/sort_filter_box.dart';
 import 'package:get/get.dart';
 import '../../../../../config/constants.dart';
 import '../../../../../core/resources/manager_color.dart';
