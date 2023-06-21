@@ -6,7 +6,7 @@ import 'package:games_organizing/core/resources/manager_shadows.dart';
 import 'package:games_organizing/core/resources/manager_strings.dart';
 import 'package:games_organizing/core/resources/manager_styles.dart';
 import 'package:games_organizing/features/game_reservation/domain/game_model.dart';
-import 'package:games_organizing/features/game_reservation/presentation/view/game_reservation.dart';
+import 'package:games_organizing/features/game_reservation/presentation/view/near_coffees.dart';
 import 'package:games_organizing/features/home/presentation/view/widgets/game_card.dart';
 import 'package:games_organizing/features/home/presentation/view/widgets/home_paint.dart';
 import 'package:games_organizing/routes/routes.dart';
@@ -193,7 +193,7 @@ class HomeView extends StatelessWidget {
                                 onTap: () {
                                   GameModel gameModel =
                                       controller.gameCards[index].gameModel!;
-                                  Get.to(GameReservation(
+                                  Get.to(NearCoffee(
                                     gameModel: gameModel,
                                   ));
                                 },

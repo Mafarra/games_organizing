@@ -82,4 +82,13 @@ class ManagerStrings {
   static const String player = 'لاعب ';
   static const String open = 'مفتوح ';
   static const String closed = 'مغلق ';
+  static const String coffeesMenu = 'قائمة الكافيهات القريبة';
+  static const String filter = 'فلتر';
+  static const String availablePrice = 'السعر المتراوح';
+  static const String arrangeBy = 'ترتيب حسب';
+  static const String mostNearme = 'الأقرب لي';
+  static const String mostReview = 'الأكثر تقييماً';
+  static const String mostPerson = 'الأكثر أشخاصاً';
+  static const String leastPrice = 'الأقل سعراً';
+  static const String applyFilter = 'تطبيق الفلتر';
 }

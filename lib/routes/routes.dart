@@ -2,7 +2,7 @@ import 'package:games_organizing/config/dependency_injection.dart';
 import 'package:games_organizing/features/auth/presentaion/view/login_view.dart';
 import 'package:games_organizing/features/challenges/presentation/view/challenges_view.dart';
 import 'package:games_organizing/features/forgotPassword/presentaion/view/forgot_password_view.dart';
-import 'package:games_organizing/features/game_reservation/presentation/view/game_reservation.dart';
+import 'package:games_organizing/features/game_reservation/presentation/view/near_coffees.dart';
 import 'package:games_organizing/features/home/presentation/view/home_view.dart';
 import 'package:games_organizing/features/main/presentation/view/main_view.dart';
 import 'package:games_organizing/features/settings/presentation/view/settings_view.dart';
@@ -30,7 +30,7 @@ class Routes {
   static const String notificatioView = '/notification_view.dart';
   static const String challengesView = '/challenges_view.dart';
   static const String settingsView = '/settings_view.dart';
-  static const String gameReservationView = '/game_reservation.dart';
+  static const String nearCoffeesView = '/near_coffees.dart';
 }
 
 class RouteGenerator {
@@ -63,9 +63,9 @@ class RouteGenerator {
       case Routes.settingsView:
         // init------();
         return MaterialPageRoute(builder: (_) => SettingsView());
-      case Routes.gameReservationView:
+      case Routes.nearCoffeesView:
         // init------();
-        return MaterialPageRoute(builder: (_) => GameReservation());
+        return MaterialPageRoute(builder: (_) => NearCoffee());
       case Routes.registerView:
         initRegisterView();
         return MaterialPageRoute(builder: (_) => RegisterView());

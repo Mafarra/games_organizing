@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../../core/resources/manager_assets.dart';
 import '../../domain/coffee_model.dart';
 
 class GameReservationController extends GetxController {
   late TextEditingController search = TextEditingController();
+  int searchResultCount = 4;
+  RangeValues selectedPriceRange = const RangeValues(20, 40);
+  int selectedContainerIndex = 0;
+
+  void selectContainer(int index) {
+    selectedContainerIndex = index;
+    update();
+  }
+
+  void updateSliderValue(RangeValues value) {
+    selectedPriceRange = value;
+    update();
+  }
 
   List<CoffeeModel> coffees = [
     CoffeeModel(
@@ -48,6 +60,7 @@ class GameReservationController extends GetxController {
     // TODO: implement onInit
     super.onInit();
     search = TextEditingController();
+    selectedPriceRange = const RangeValues(10, 50);
   }
 
   @override
