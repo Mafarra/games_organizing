@@ -20,6 +20,7 @@ class ManagerColors {
   static const Color background = Color(0xFFF2F7F7);
   static const Color backgroundForm = Color(0xFFFBFBFE);
   static const Color grey = Color(0xFFB4B8BD);
+  static const Color greyDark = Color(0xFF454545);
   static const Color backgroundCategory = Color(0xFEDD6800);
   static const Color backgroundCategories = Color(0xFFF1F1F1);
   static const Color selectedCategory = Color(0xFFFFC727);

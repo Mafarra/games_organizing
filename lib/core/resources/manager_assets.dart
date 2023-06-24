@@ -17,6 +17,7 @@ class ManagerAssets {
   static const resetPasswordIllustration = "$imagePath/Reset-password.svg";
   static const male = "$imagePath/male.svg";
   static const female = "$imagePath/female.svg";
+  static const tables = "$imagePath/tables.png";
   static const chooseAccountPackground =
       "$imagePath/choose_account_background.svg";
   static const chooseAccountPackgroundImage = "$imagePath/choose_acc_back.png";
@@ -28,4 +29,6 @@ class ManagerAssets {
       "https://media.istockphoto.com/id/1337857663/photo/businessman-playing-chess-game-indoors.jpg?s=170667a&w=0&k=20&c=g7M3JR6LWAAnmjZ9l6mC--_iadLNXOrymqPdtOcsDXs=";
 
   static const comingSoon = "$jsonPath/coming-soon.json";
+  static const coffeeIcon = "$imagePath/coffee_icon.png";
+  static const coffeeMarker = "$imagePath/coffee_marker.png";
 }

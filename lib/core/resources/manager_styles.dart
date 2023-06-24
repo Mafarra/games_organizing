@@ -1,4 +1,3 @@
-import 'package:games_organizing/core/extensions/extensions.dart';
 import 'package:games_organizing/core/resources/manager_fonts.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +20,7 @@ TextStyle getRegularTextStyle({
   required double fontSize,
   required Color color,
   TextDecoration decoration = TextDecoration.none,
+
 }) {
   return _textStyle(
       fontSize: fontSize,

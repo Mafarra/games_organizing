@@ -91,4 +91,15 @@ class ManagerStrings {
   static const String mostPerson = 'الأكثر أشخاصاً';
   static const String leastPrice = 'الأقل سعراً';
   static const String applyFilter = 'تطبيق الفلتر';
+  static const String availableSeats = 'المقاعد المتاحة للحجز';
+  static const String availableTables = 'قائمة الطاولات المتوفرة';
+  static const String reservedSeats = 'المقاعد المحجوزة';
+  static const String reserveSeat = 'إحجز مقعد';
+  static const String seatPrice = 'سعر المقعد';
+  static const String workTime = 'ساعات العمل من 9ص - 11م';
+  static const String coffeeDescription =
+      '''هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق''';
+  static const String coffeePosittion = 'موقع الكافي';
+  static const String awayFromYou = 'يبعد عنك';
+  static const String coffeeMenu = 'منيو الكافي';
 }

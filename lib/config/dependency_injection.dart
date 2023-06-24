@@ -83,6 +83,7 @@ initVerificationView() {
 disposeVerificationView() {
   Get.delete<VereificationController>();
 }
+
 initResetPassView() {
   disposeVerificationView();
   Get.put<VereificationController>(VereificationController());
