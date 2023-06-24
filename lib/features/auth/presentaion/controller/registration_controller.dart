@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:games_organizing/core/extensions/extensions.dart';
 import 'package:games_organizing/core/resources/manager_assets.dart';
-import 'package:games_organizing/features/auth/domain/gender_model.dart';
+import 'package:games_organizing/core/resources/manager_strings.dart';
+import 'package:games_organizing/features/auth/domain/model/gender_model.dart';
+import 'package:games_organizing/features/home/presentation/view/home_view.dart';
+import 'package:games_organizing/features/main/presentation/view/main_view.dart';
 import 'package:get/get.dart';
+import 'package:logger/logger.dart';
+import '../../../../config/constants_network.dart';
 import '../../../../core/resources/manager_color.dart';
+import '../../../../core/util/app_shaerd_data.dart';
+import '../../../../core/util/sh_util.dart';
 import '../../../../routes/routes.dart';
+import '../../data/auth_feature.dart';
 
 class RegisterController extends GetxController {
   late TextEditingController fullName = TextEditingController();
   late TextEditingController email = TextEditingController();
   late TextEditingController password = TextEditingController();
   late TextEditingController confirmPassword = TextEditingController();
-  late String genderType = '';
-  late String birthDate = '';
+  late int genderType = 1;
   var formKey = GlobalKey<FormState>();
   bool passwordVisible = false;
   bool policyBoxValue = false;
+  bool isLoading = false;
   List<GenderModel> genderItems = [
     GenderModel(
       genderType: 'ذكر',
@@ -32,6 +40,63 @@ class RegisterController extends GetxController {
       color: ManagerColors.grey,
     ),
   ];
+
+  //click on sign in btn on login page
+  void signUpValid() {
+    if (password.text != confirmPassword.text) {
+      snackError("", ManagerStrings.errorPasswordMatches.tr);
+      return;
+    }
+    if (!policyBoxValue) {
+      snackError("", ManagerStrings.acceptPolicyConditions.tr);
+      return;
+    }
+    Map<String, dynamic> map = {
+      ConstanceNetwork.nameKey: fullName.text.toString(),
+      ConstanceNetwork.passwordKey: password.text.toString(),
+      ConstanceNetwork.passwordConfirmKey: confirmPassword.text.toString(),
+      ConstanceNetwork.emailKey: email.text.toString(),
+      ConstanceNetwork.genderKey: genderType,
+    };
+    SharedPref.instance.setUserName(fullName.text.toString());
+    SharedPref.instance.setPasswordUser(password.text.toString());
+    _signUp(map);
+  }
+
+  //make signIn methode
+  Future<void> _signUp(Map<String, dynamic> map) async {
+    try {
+      startLoading();
+      await UserAuthFeature.getInstance.signUp(map).then((value) async {
+        //handle object from value || [save in sharedPreferences]
+        Logger().d(value.toJson());
+        // await SharedPref.instance.setUserLogin(true);
+        await Get.offAllNamed(Routes.mainView);
+        endLoading();
+        snackSuccess(ManagerStrings.success, ManagerStrings.success);
+      }).catchError((onError) {
+        //handle error from value
+        snackError("Error", onError.toString());
+        Logger().d(onError.toString());
+        endLoading();
+      });
+    } catch (e) {
+      snackError("Error", ManagerStrings.noInternetConnection.tr);
+      Logger().d(e.toString());
+      endLoading();
+    }
+  }
+
+  void startLoading() {
+    isLoading = true;
+    update();
+  }
+
+  void endLoading() {
+    isLoading = false;
+    update();
+  }
+
   Icon showIconVisible() {
     return Icon(
       passwordVisible ? Icons.visibility : Icons.visibility_off,
@@ -68,7 +133,7 @@ class RegisterController extends GetxController {
   }
 
   void saveGenderType(GenderModel genderModel) {
-    genderType = genderModel.genderType.onNull();
+    genderType = genderModel.id.onNull();
     update();
   }
 

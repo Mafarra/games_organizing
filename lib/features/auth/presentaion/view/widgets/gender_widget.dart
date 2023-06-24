@@ -5,7 +5,7 @@ import 'package:games_organizing/core/resources/manager_fonts.dart';
 import 'package:games_organizing/core/resources/manager_styles.dart';
 import '../../../../../core/resources/manager_color.dart';
 import '../../../../../core/resources/managers_size.dart';
-import '../../../domain/gender_model.dart';
+import '../../../domain/model/gender_model.dart';
 import '../../controller/registration_controller.dart';
 
 Widget genderItem(

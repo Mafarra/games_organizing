@@ -5,7 +5,7 @@ import 'package:games_organizing/core/resources/manager_strings.dart';
 Map<String, String> arSU = {
   ///////////////////////////////////// JobMe App ////////////
   ManagerStrings.noRouteFound: "هذا المسار غير موجود",
-  ManagerStrings.noInternetConnection: "لا يوجد اتصال بالشبكة",
+  ManagerStrings.noInternetConnection:"يرجى تفقد اتصالك بالانترنت",
   ManagerStrings.next: 'التالي', //'Next',
   ManagerStrings.startNow: 'إبدأ الآن', //'Start Now',
   ManagerStrings.skip: 'تخطي',

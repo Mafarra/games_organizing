@@ -6,6 +6,7 @@ import 'package:games_organizing/features/auth/presentaion/view/widgets/gender_w
 import 'package:get/get.dart';
 import '../../../../core/resources/manager_color.dart';
 import '../../../../core/resources/manager_strings.dart';
+import '../../../../core/util/app_shaerd_data.dart';
 import '../../../../core/validator/validator.dart';
 import '../../../../core/widgets/base_text_form_field.dart';
 import '../../../../core/widgets/main_button.dart';
@@ -210,11 +211,13 @@ class RegisterView extends StatelessWidget {
                     shapeBorder: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
                     child: Text(
-                      ManagerStrings.signIn,
+                      ManagerStrings.signUp,
                       style: getMediumTextStyle(
                           fontSize: 14, color: ManagerColors.white),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      _onSignUpClick(controller);
+                    },
                   ),
                   SizedBox(
                     height: ManagerHeight.h18,
@@ -248,5 +251,14 @@ class RegisterView extends StatelessWidget {
         },
       ),
     );
+  }
+
+  _onSignUpClick(RegisterController logic) {
+    bool isValid = logic.formKey.currentState!.validate();
+    hideFocus(Get.context);
+    if (isValid) {
+      logic.formKey.currentState?.save();
+      logic.signUpValid();
+    }
   }
 }

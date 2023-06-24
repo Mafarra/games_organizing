@@ -15,7 +15,6 @@ import '../resources/manager_strings.dart';
 import '../util/app_shaerd_data.dart';
 import '../util/sh_util.dart';
 
-
 class DioManagerClass {
   DioManagerClass._();
 
@@ -28,9 +27,9 @@ class DioManagerClass {
     _dio = Dio(
       BaseOptions(
         baseUrl: ConstanceNetwork.baseUrl,
-        connectTimeout: const Duration(seconds: 2000),
-        receiveTimeout: const Duration(seconds: 2000),
-        sendTimeout: const Duration(seconds: 2000),
+        connectTimeout: const Duration(milliseconds: 200000),
+        receiveTimeout: const Duration(milliseconds: 200000),
+        sendTimeout: const Duration(milliseconds: 200000),
         receiveDataWhenStatusError: true,
       ),
     );
@@ -38,7 +37,8 @@ class DioManagerClass {
     return _dio!;
   }
 
-  Future<Response> dioGetMethod({var url, Map<String, dynamic>? header, var queryParameters}) async {
+  Future<Response> dioGetMethod(
+      {var url, Map<String, dynamic>? header, var queryParameters}) async {
     if (await checkInternetConnectivity()) {
       return await _dio!.get(url,
           options: Options(headers: header),
@@ -133,11 +133,15 @@ class ApiInterceptors extends Interceptor {
     Logger().d("onError : ${err.message}");
     if (err.message!.contains("401")) {
       SharedPref.instance.setUserLogin(false);
-        getx.Get.offAll(LoginView());
+      getx.Get.offAll(LoginView());
       return;
     }
-    if(err.message!.contains("SocketException")){
-      snackError("",ManagerStrings.noInternetConnection.toString().replaceAll("SocketException", ""));
+    if (err.message!.contains("SocketException")) {
+      snackError(
+          "",
+          ManagerStrings.noInternetConnection
+              .toString()
+              .replaceAll("SocketException", ""));
     }
   }
 }

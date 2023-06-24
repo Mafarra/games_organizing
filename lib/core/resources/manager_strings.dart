@@ -103,4 +103,14 @@ class ManagerStrings {
   static const String awayFromYou = 'يبعد عنك';
   static const String coffeeMenu = 'منيو الكافي';
   static const String txtReturnTime = "Return Time";
+  ///////api
+  static const String errorPasswordLength = "errorPassword";
+  static const String errorPasswordMatches = "errorPasswordMatches";
+  static const String acceptPolicyConditions = "acceptPolicyConditions";
+  static const String fillYourPhoneNumber = "fillYourPhoneNumber";
+  static const String fillYourVerificationCode = "fillYourVerificationCode";
+  static const String messageMatcherEmail = "messageMatcherEmail";
+  static const String txtConnectionNote = "txtConnectionNote";
+  static const String txtFiledRequired = "txtFiledRequired";
+  static const String success = "Success";
 }

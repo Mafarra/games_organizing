@@ -3,6 +3,8 @@ import 'package:games_organizing/features/auth/presentaion/controller/login_cont
 import 'package:games_organizing/features/out_bording/presentation/controller/out_boarding_controller.dart';
 import 'package:get/get.dart';
 import 'package:get_it/get_it.dart';
+import '../core/dio_manager/dio_manage_class.dart';
+import '../core/util/sh_util.dart';
 import '../features/auth/presentaion/controller/registration_controller.dart';
 import '../features/choose_account/presentation/controller/choose_account_controller.dart';
 import '../features/email_code_verification/presentation/controller/verification_controller.dart';
@@ -14,6 +16,9 @@ final instance = GetIt.instance;
 
 initModul() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await SharedPref.instance.init();
+  DioManagerClass.getInstance.init();
+  await SharedPref.instance.setUserLogin(false);
 }
 
 initSplash() {
@@ -94,5 +99,8 @@ disposeResetPassView() {
 }
 
 initMainModule() {
+  disposeSplash();
+  disposeLoginView();
+  disposeRegisterView();
   Get.put<MainController>(MainController());
 }

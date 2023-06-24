@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:games_organizing/core/extensions/extensions.dart';
 import '../../../../config/constants.dart';
 import '../../../../core/resources/manager_color.dart';
+import '../../../../core/util/sh_util.dart';
 import '../../../../core/widgets/welcome_page_view.dart';
 import '../../../../routes/routes.dart';
 
@@ -45,7 +46,8 @@ class OutBoarddingController extends GetxController {
     update();
   }
 
-  void skipPage() {
+  void skipPage() async {
+    // await SharedPref.instance.setOutBoardingViewed();
     isNotLastPage() ? _customAnimateToPage(pageCount - 1) : null;
     currentPageIndex = pageCount - 1;
     update();
@@ -55,10 +57,11 @@ class OutBoarddingController extends GetxController {
     return currentPageIndex != pageCount - 1;
   }
 
-  void gotoNextPage() {
+  void gotoNextPage() async {
     isNotLastPage()
         ? _customAnimateToPage(++currentPageIndex)
         : Get.offAllNamed(Routes.loginView);
+    await SharedPref.instance.setOutBoardingViewed();
     update();
   }
 

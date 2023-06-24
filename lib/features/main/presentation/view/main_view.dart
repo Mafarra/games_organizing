@@ -12,6 +12,7 @@ class MainView extends StatelessWidget {
   Widget build(BuildContext context) {
     return willPopScope(
       child: GetBuilder<MainController>(
+        init: MainController(),
         builder: (controller) {
           return Directionality(
             textDirection: TextDirection.rtl,

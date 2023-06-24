@@ -265,16 +265,16 @@ String formatStringWithCurrency(var data /*, String currency*/) {
 }
 
 
-bool isUser() {
-  return SharedPref.instance.getIsUserKey();
-}
+// bool isUser() {
+//   return SharedPref.instance.getIsUserKey();
+// }
 
 loginUserAgain() {
   var userName = SharedPref.instance.getUserName();
   var password = SharedPref.instance.getPassword();
   if (userName.toString().isNotEmpty && password.toString().isNotEmpty) {
     Map<String, dynamic> map = {
-      ConstanceNetwork.userNameKey: userName,
+      ConstanceNetwork.nameKey: userName,
       ConstanceNetwork.passwordKey: password,
       ConstanceNetwork.fcmToken: SharedPref.instance.getFCMToken().toString(),
     };

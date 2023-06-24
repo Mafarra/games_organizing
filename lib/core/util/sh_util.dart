@@ -1,9 +1,11 @@
+import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:games_organizing/core/extensions/extensions.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import '../../features/auth/domain/model/user_data_model.dart';
 import '../service/localization/localization_service.dart';
 
 class SharedPref {
@@ -12,26 +14,14 @@ class SharedPref {
   SharedPref._();
 
   factory SharedPref() => instance;
-
+  static const String outBoardingViewedKey = "out_boarding_viewed";
   final String fcmKey = "fcm";
   final String langKey = "langKey";
-  final String userDataCompanyKey = "userDataCompany";
-  final String loginCompanyKey = "loginCompany";
-  final String userNameCompanyKey = "userNameCompany";
-  final String passwordCompanyKey = "passwordCompany";
   final String userDataKey = "userData";
   final String userProfileDataKey = "userProfileData";
-  final String loginUserKey = "loginUser";
-  final String userNameKey = "userNameUser";
-  final String userpasswordKey = "passwordUser";
-  final String clientTypeKey = "clientTypeKey"; 
-  final String userNameSocialKey = "UserNameSocial";
-  final String emailSocialKey = "setEmailSocial";
-  final String imageSocialKey = "setImageSocial";
-  final String idSocialKey = "setIdSocial";
-  final String idSocialCompanyKey = "idSocialCompanyKey";
-  final String socialTypeKey = "setSocialType";
-  final String socialHandlerKey = "SocialHandler";
+  final String loginUserKey = "login";
+  final String userNameKey = "userName";
+  final String userpasswordKey = "password";
   static SharedPreferences? _prefs;
 
   init() async {
@@ -45,22 +35,18 @@ class SharedPref {
       printError(info: e.toString());
     }
   }
+Future<void> setOutBoardingViewed() async {
+    await _prefs?.setBool(
+        outBoardingViewedKey, true);
+  }
 
+  bool getOutBoardingViewed() {
+    return _prefs!.getBool(outBoardingViewedKey).onNull();
+  }
   String getFCMToken() {
     return _prefs!.getString(fcmKey) ?? "";
   }
 
-  setIsUserKey(bool isUser) async {
-    try {
-      await _prefs?.setBool(clientTypeKey, isUser);
-    } catch (e) {
-      printError(info: e.toString());
-    }
-  }
-
-  bool getIsUserKey() {
-    return _prefs!.getBool(clientTypeKey) ?? true;
-  }
 
   Future<void> setAppLang(String lang) async {
     try {
@@ -92,36 +78,10 @@ class SharedPref {
     }
   }
 
-  // setUserBalance(BalanceData value) async {
-  //   try {
-  //     var userData = getUserData();
-  //     userData.balance = value.balance.toString();
-  //     userData.finish = value.finish;
-  //     setUserData(jsonEncode(userData.toJson()));
-  //     await _prefs?.setString(userBalanceKey, jsonEncode(userData.toJson()));
-  //   } catch (e) {
-  //     Logger().e(e);
-  //     return "$e";
-  //   }
-  // }
-  //
-  setUserDataCompany(String profileData) async {
-    try {
-      await _prefs?.setString(userDataCompanyKey, profileData.toString());
-    } catch (e) {
-      Logger().e(e);
-      return "$e";
-    }
-  }
-
-
   //clear
   clear() async {
     _prefs?.remove(userDataKey);
     _prefs?.remove(fcmKey);
-    _prefs?.remove(passwordCompanyKey);
-    _prefs?.remove(idSocialCompanyKey);
-    // _prefs?.remove(userProfileDataKey);
   }
 
 //////////////////////////////////////////User part/////////////////////////////
@@ -135,17 +95,17 @@ class SharedPref {
     }
   }
 
-  // UserDataModel getUserData() {
-  //   try {
-  //     var string = _prefs?.getString(userDataKey) ?? "";
-  //     var decode = json.decode(string);
-  //     UserDataModel profileData = UserDataModel.fromJson(decode);
-  //     return profileData;
-  //   } catch (e) {
-  //     Logger().e(e);
-  //     return UserDataModel();
-  //   }
-  // }
+  UserDataModel getUserData() {
+    try {
+      var string = _prefs?.getString(userDataKey) ?? "";
+      var decode = json.decode(string);
+      UserDataModel profileData = UserDataModel.fromJson(decode);
+      return profileData;
+    } catch (e) {
+      Logger().e(e);
+      return UserDataModel();
+    }
+  }
 
   setUserProfileData(String profileData) async {
     try {
@@ -240,128 +200,6 @@ class SharedPref {
     }
   }
 
-  void setUserNameSocial(String fullNameKey) {
-    try {
-      _prefs?.setString(userNameSocialKey , fullNameKey) ;
-    } catch (e) {
-      Logger().e(e);
-    }
-  }
-
-  void setEmailSocial(String emailKey) {
-
-    try {
-      _prefs?.setString(emailSocialKey , emailKey) ;
-    } catch (e) {
-      Logger().e(e);
-    }
-  }
-
-  void setImageSocial(String imageKey) {
-
-    try {
-      _prefs?.setString(imageSocialKey , imageKey) ;
-    } catch (e) {
-      Logger().e(e);
-    }
-  }
-
-  void setIdSocial(String socialId) {
-
-    try {
-      _prefs?.setString(idSocialKey , socialId) ;
-    } catch (e) {
-      Logger().e(e);
-    }
-  }
-
-  void setIdSocialCompany(String socialId) {
-
-    try {
-      _prefs?.setString(idSocialCompanyKey , socialId) ;
-    } catch (e) {
-      Logger().e(e);
-    }
-  }
-
-  void setSocialType(String socialType) {
-
-    try {
-      _prefs?.setString(socialTypeKey , socialType) ;
-    } catch (e) {
-      Logger().e(e);
-    }
-  }
-
-
-
-
-  String getUserNameSocial() {
-    try {
-      return _prefs?.getString(userNameSocialKey ) ??"" ;
-    } catch (e) {
-      Logger().e(e);
-      return "";
-    }
-  }
-
-  String getEmailSocial() {
-
-    try {
-      return _prefs?.getString(emailSocialKey ) ??"";
-    } catch (e) {
-      Logger().e(e);
-      return "";
-    }
-  }
-
-  String getImageSocial() {
-
-    try {
-      return _prefs?.getString(imageSocialKey ) ??"";
-    } catch (e) {
-      Logger().e(e);
-      return "";
-    }
-  }
-
-  String getIdSocial() {
-
-    try {
-      return _prefs?.getString(idSocialKey) ?? "" ;
-    } catch (e) {
-      Logger().e(e);
-      return "";
-    }
-  }
-
-  String getIdSocialCompany() {
-
-    try {
-      return _prefs?.getString(idSocialCompanyKey) ?? "" ;
-    } catch (e) {
-      Logger().e(e);
-      return "";
-    }
-  }
-
-  String getSocialType() {
-
-    try {
-      return _prefs?.getString(socialTypeKey )??"" ;
-    } catch (e) {
-      Logger().e(e);
-      return "";
-    }
-  }
-
-  storeSocialHandler(bool isHide){
-    _prefs?.setBool(socialHandlerKey, isHide);
-  }
-
-  bool getStoreSocialHandler(){
-    return  _prefs?.getBool(socialHandlerKey )?? false;
-  }
   // void setUserDataUpdated(json) {
   //   try {
   //     var userData = getUserData();
