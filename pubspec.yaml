@@ -35,7 +35,8 @@ dependencies:
   flutter_svg: null
   get: ^4.6.5
   get_it: ^7.6.0
-  lottie: 
+  google_maps_flutter: 
+  lottie: null
   persistent_bottom_nav_bar_v2: ^4.2.8
 
 dev_dependencies:
