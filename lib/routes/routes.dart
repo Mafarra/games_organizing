@@ -11,7 +11,6 @@ import 'package:games_organizing/features/splash/presentation/view/splash_view.d
 import 'package:flutter/material.dart';
 import '../core/resources/manager_strings.dart';
 import '../features/auth/presentaion/view/register_view.dart';
-import '../features/choose_account/presentation/view/choose_Account.dart';
 import '../features/email_code_verification/presentation/view/verification_view.dart';
 import '../features/notification/presentation/view/notification_view.dart';
 import '../features/out_bording/presentation/view/out_boarding_view.dart';
