@@ -1,5 +1,4 @@
 class Constants {
-  static const String baseUrl = "http://example.com";
   static const double deviceWidth = 375.0;
   static const double deviceHeight = 812.0;
   static const int splashDuration = 3;

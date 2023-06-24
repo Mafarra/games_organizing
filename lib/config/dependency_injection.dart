@@ -35,21 +35,21 @@ disposeOutBoarding() {
   Get.delete<OutBoarddingController>();
 }
 
-initChooseAccountsView() {
-  disposeOutBoarding();
-  Get.put<ChooseAccountController>(
-    ChooseAccountController(),
-  );
-}
+// initChooseAccountsView() {
+//   disposeOutBoarding();
+//   Get.put<ChooseAccountController>(
+//     ChooseAccountController(),
+//   );
+// }
 
-disposeChooseAccountsView() {
-  Get.delete<ChooseAccountController>();
-}
+// disposeChooseAccountsView() {
+//   Get.delete<ChooseAccountController>();
+// }
 
 initLoginView() {
   disposeRegisterView();
   disposeOutBoarding();
-  disposeChooseAccountsView();
+  // disposeChooseAccountsView();
   Get.put<LoginController>(LoginController());
 }
 
@@ -83,6 +83,7 @@ initVerificationView() {
 disposeVerificationView() {
   Get.delete<VereificationController>();
 }
+
 initResetPassView() {
   disposeVerificationView();
   Get.put<VereificationController>(VereificationController());
