@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:games_organizing/core/extensions/extensions.dart';
-import 'package:games_organizing/core/resources/manager_assets.dart';
 import 'package:games_organizing/core/resources/manager_fonts.dart';
 import 'package:games_organizing/core/resources/manager_shadows.dart';
 import 'package:games_organizing/core/resources/manager_strings.dart';
@@ -11,7 +9,6 @@ import 'package:games_organizing/features/home/presentation/view/widgets/game_ca
 import 'package:games_organizing/features/home/presentation/view/widgets/home_paint.dart';
 import 'package:games_organizing/routes/routes.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import '../../../../core/resources/manager_color.dart';
 import '../../../../core/resources/managers_size.dart';
 import '../../../../core/widgets/user_info_widget.dart';

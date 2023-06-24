@@ -4,28 +4,13 @@ import 'package:games_organizing/core/resources/manager_strings.dart';
 import 'package:games_organizing/core/resources/manager_styles.dart';
 import 'package:games_organizing/core/resources/managers_size.dart';
 import 'package:get/get.dart';
-
 import '../../../../../core/resources/manager_color.dart';
-import '../../controller/game_reservation_controller.dart';
+import '../../controller/near_coffees_controller.dart';
 
-class RoundedContainerSelection extends StatefulWidget {
-  @override
-  _RoundedContainerSelectionState createState() =>
-      _RoundedContainerSelectionState();
-}
-
-class _RoundedContainerSelectionState extends State<RoundedContainerSelection> {
-  // int selectedContainerIndex = 0;
-
-  // void selectContainer(int index) {
-  //   setState(() {
-  //     selectedContainerIndex = index;
-  //   });
-  // }
-
+class RoundedContainerSelection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<GameReservationController>(builder: (controller) {
+    return GetBuilder<NearCoffeeController>(builder: (controller) {
       return Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,

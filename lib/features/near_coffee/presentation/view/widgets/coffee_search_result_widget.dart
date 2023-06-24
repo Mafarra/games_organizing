@@ -8,8 +8,8 @@ import '../../../../../core/resources/managers_size.dart';
 import '../../../domain/coffee_model.dart';
 
 class SearchCoffeeResultWidget extends StatelessWidget {
-  final CoffeeModel? coffeeModel;
-  const SearchCoffeeResultWidget({
+  late CoffeeModel? coffeeModel;
+  SearchCoffeeResultWidget({
     super.key,
     this.coffeeModel,
   });

@@ -9,11 +9,11 @@ import '../../../../../core/resources/manager_fonts.dart';
 import '../../../../../core/resources/manager_strings.dart';
 import '../../../../../core/resources/manager_styles.dart';
 import '../../../../../core/resources/managers_size.dart';
-import '../../controller/game_reservation_controller.dart';
+import '../../controller/near_coffees_controller.dart';
 
 displayEvaluationBottomSheet(
   BuildContext context,
-  GameReservationController controller,
+  NearCoffeeController controller,
 ) {
   return showModalBottomSheet(
       isScrollControlled: true,

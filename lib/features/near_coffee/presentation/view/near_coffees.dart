@@ -11,7 +11,9 @@ import '../../../../core/resources/manager_assets.dart';
 import '../../../../core/resources/manager_color.dart';
 import '../../../../core/widgets/base_text_form_field.dart';
 import '../../../../core/widgets/main_button.dart';
-import '../controller/game_reservation_controller.dart';
+import '../../../coffe_details/presenation/View/coffee_details.dart';
+import '../../../coffe_details/presenation/controller/coffee_details_controller.dart';
+import '../controller/near_coffees_controller.dart';
 
 class NearCoffee extends StatelessWidget {
   final GameModel? gameModel;
@@ -33,8 +35,8 @@ class NearCoffee extends StatelessWidget {
         body: Container(
           padding: EdgeInsetsDirectional.symmetric(
               horizontal: ManagerWidth.w16, vertical: ManagerHeight.h10),
-          child: GetBuilder<GameReservationController>(
-              init: GameReservationController(),
+          child: GetBuilder<NearCoffeeController>(
+              init: NearCoffeeController(),
               builder: (controller) {
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -173,12 +175,18 @@ class NearCoffee extends StatelessWidget {
                       child: ListView.builder(
                         padding:
                             EdgeInsets.symmetric(vertical: ManagerHeight.h8),
-                        itemCount: controller.coffees.length,
+                        itemCount: controller.getCoffees().length,
                         itemBuilder: (context, index) {
                           return InkWell(
-                            // onTap: () => ,
+                            onTap: () {
+                              CoffeeDetailsController coffeeController = Get.put(CoffeeDetailsController());
+                              coffeeController.addMarkers(coffeeModel: controller.myCoffees[index]);
+                              Get.to(CoffeDetailsView(
+                                coffeeModel: controller.myCoffees[index],
+                              ));
+                            },
                             child: SearchCoffeeResultWidget(
-                              coffeeModel: controller.coffees[index],
+                              coffeeModel: controller.myCoffees[index],
                             ),
                           );
                         },
