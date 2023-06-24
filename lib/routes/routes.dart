@@ -22,7 +22,7 @@ class Routes {
   static const String outBoardingView = '/out_boarding_view';
   static const String loginView = '/login_view';
   static const String registerView = '/register_view';
-  static const String chooseAccountView = '/choose_account';
+  // static const String chooseAccountView = '/choose_account';
   static const String forgotPasswordView = '/forgot_password_view';
   static const String verificatinView = '/verification_view.dart';
   static const String resetPasswordView = '/reset_password.dart';
@@ -44,9 +44,9 @@ class RouteGenerator {
       case Routes.outBoardingView:
         initOutBoarding();
         return MaterialPageRoute(builder: (_) => const OutBordingView());
-      case Routes.chooseAccountView:
-        initChooseAccountsView();
-        return MaterialPageRoute(builder: (_) => const ChooseAccountView());
+      // case Routes.chooseAccountView:
+        // initChooseAccountsView();
+        // return MaterialPageRoute(builder: (_) => const ChooseAccountView());
       case Routes.loginView:
         initLoginView();
         return MaterialPageRoute(builder: (_) => LoginView());

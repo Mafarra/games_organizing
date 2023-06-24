@@ -1,6 +1,6 @@
 class ManagerStrings {
   static const String noRouteFound = "No Route Found";
-  static const String actHub = "Act-Hub";
+  static const String noInternetConnection = "No Internet Connection";
   static const String next = 'التالي'; //'Next';
   static const String startNow = 'إبدأ الآن'; //'Start Now';
   static const String skip = 'تخطي';
@@ -102,4 +102,5 @@ class ManagerStrings {
   static const String coffeePosittion = 'موقع الكافي';
   static const String awayFromYou = 'يبعد عنك';
   static const String coffeeMenu = 'منيو الكافي';
+  static const String txtReturnTime = "Return Time";
 }

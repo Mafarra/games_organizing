@@ -31,4 +31,5 @@ class ManagerAssets {
   static const comingSoon = "$jsonPath/coming-soon.json";
   static const coffeeIcon = "$imagePath/coffee_icon.png";
   static const coffeeMarker = "$imagePath/coffee_marker.png";
+  static const loadingShimmer = "$imagePath/loading_shimmer.gif";
 }
