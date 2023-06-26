@@ -102,9 +102,8 @@ class LoginView extends StatelessWidget {
                               color: ManagerColors.grey),
                         ),
                         onPressed: () =>
-                            // Get.offAllNamed(Routes.forgotPasswordView),
-                            //just for test
-                            Get.offAllNamed(Routes.verificatinView),
+                            Get.offAllNamed(Routes.forgotPasswordView),
+                            
                       ),
                       Row(
                         children: [

@@ -11,6 +11,7 @@ import '../../../../core/resources/manager_styles.dart';
 import '../../../../core/validator/validator.dart';
 import '../../../../core/widgets/base_text_form_field.dart';
 import '../../../../core/widgets/main_button.dart';
+import '../../../../routes/routes.dart';
 import '../controller/forgot_password_controller.dart';
 
 class ForgotPassword extends StatelessWidget {
@@ -104,9 +105,10 @@ class ForgotPassword extends StatelessWidget {
                             style: getMediumTextStyle(
                                 fontSize: 14, color: ManagerColors.white),
                           ),
-                          onPressed: () {
-                            //api
-                          },
+                          onPressed: () =>
+                              //api
+                              //get to verification => resetpass
+                              Get.offAllNamed(Routes.verificatinView),
                         ),
                       ],
                     );
