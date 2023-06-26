@@ -6,6 +6,7 @@ import 'package:games_organizing/routes/routes.dart';
 import 'package:get/get.dart';
 import '../../../../core/resources/manager_color.dart';
 import '../../../../core/resources/manager_strings.dart';
+import '../../../../core/util/app_shaerd_data.dart';
 import '../../../../core/validator/validator.dart';
 import '../../../../core/widgets/base_text_form_field.dart';
 import '../../../../core/widgets/main_button.dart';
@@ -152,7 +153,7 @@ class LoginView extends StatelessWidget {
                     ),
                     onPressed: () {
                       //api login
-                      Get.offAllNamed(Routes.mainView);
+                      _onSignUpClick(controller);
                     },
                   ),
                   SizedBox(
@@ -188,5 +189,14 @@ class LoginView extends StatelessWidget {
         },
       ),
     );
+  }
+
+  _onSignUpClick(LoginController logic) {
+    bool isValid = logic.formKey.currentState!.validate();
+    hideFocus(Get.context);
+    if (isValid) {
+      logic.formKey.currentState?.save();
+      logic.signInValid();
+    }
   }
 }

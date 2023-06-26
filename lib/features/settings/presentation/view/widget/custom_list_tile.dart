@@ -12,6 +12,7 @@ class CustomListTile extends StatelessWidget {
   Widget? trailing;
   ShapeBorder? shape;
   bool? isForTitle = false;
+  Function()? onTap;
   CustomListTile({
     super.key,
     this.title,
@@ -20,12 +21,14 @@ class CustomListTile extends StatelessWidget {
     this.trailing,
     this.shape,
     this.isForTitle,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return isForTitle == false
         ? ListTile(
+            onTap: onTap,
             shape: shape,
             dense: true,
             contentPadding: EdgeInsetsDirectional.symmetric(

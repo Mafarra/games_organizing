@@ -12,6 +12,8 @@ abstract class ConstanceNetwork {
 
   /// here insert key Of Request
   static String register = "/register";
+  static String login = "/login";
+  static String logout = "/logout";
 
   ///
   /// this for register keys

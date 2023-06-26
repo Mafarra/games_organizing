@@ -24,22 +24,22 @@ class UserAuthFeature {
       return UserDataModel.fromJson(appResponse.data ?? {});
     }
   }
-/*
+
   Future<UserDataModel> loginUser(Map<String, dynamic> body) async {
     var appResponse = await UserAuthModel.getInstance.loginUserRequest(
         body: body,
-        url: ConstanceNetwork.loginApi,
-        header: ConstanceNetwork.userHeader(3));
+        url: ConstanceNetwork.login,
+        header: ConstanceNetwork.header(0));
     if (appResponse.status == true) {
       Logger().d("if ${appResponse.toJson()}");
-      return UserDataModel.fromJson(appResponse.result ?? {});
+      return UserDataModel.fromJson(appResponse.data ?? {});
     } else {
       snackError("", appResponse.message);
       Logger().d("else ${appResponse.toJson()}");
-      return UserDataModel.fromJson(appResponse.result ?? {});
+      return UserDataModel.fromJson(appResponse.data ?? {});
     }
   }
-
+/*
   Future<AppResponse> logoutUser() async {
     var appResponse = await UserAuthModel.getInstance.logoutUserRequest(
         url: ConstanceNetwork.logoutApi, header: ConstanceNetwork.userHeader(5));
