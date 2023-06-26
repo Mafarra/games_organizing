@@ -218,6 +218,9 @@ class SettingsView extends StatelessWidget {
                     borderRadius: BorderRadius.circular(ManagerRadius.r8),
                   ),
                   child: CustomListTile(
+                    onTap: () {
+                      //signout api
+                    },
                     title: ManagerStrings.signOut,
                     leading: Container(
                       width: ManagerWidth.w42,
